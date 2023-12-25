@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Classcommit1.cs" />
     <Compile Include="Classcommit2.cs" />
+    <Compile Include="LocalPush.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -113,6 +113,11 @@ BEGIN
     PREPARE stmt FROM @dynamic_sql;
     EXECUTE stmt;
     DEALLOCATE PREPARE stmt;
+    
+    SET @dynamic_sql = CONCAT('GRANT EXECUTE ON PROCEDURE course.ModifyGrades TO ''', new_username, '''@localhost; ');
+    PREPARE stmt FROM @dynamic_sql;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
 
     INSERT INTO teacher_logins (teacher_id, login, password)
     VALUES (new_id, new_username, new_password);
@@ -133,11 +138,16 @@ BEGIN
     DELETE FROM teacher_logins WHERE teacher_id = p_teacher_id;
     DELETE FROM Teachers WHERE id = p_teacher_id;
 
-    SET @delete_user_sql = CONCAT('DROP USER \'', user_login, '\'@\'localhost\'');
+    SET @delete_user_sql = CONCAT('REVOKE ALL PRIVILEGES ON *.* FROM \'', user_login, '\'@\'localhost\'');
     PREPARE delete_user_stmt FROM @delete_user_sql;
     EXECUTE delete_user_stmt;
     DEALLOCATE PREPARE delete_user_stmt;
-
+    
+	SET @delete_user_sql = CONCAT('DROP USER \'', user_login, '\'@\'localhost\'');
+    PREPARE delete_user_stmt FROM @delete_user_sql;
+    EXECUTE delete_user_stmt;
+    DEALLOCATE PREPARE delete_user_stmt;
+    
     COMMIT;
 END //
 DELIMITER ;

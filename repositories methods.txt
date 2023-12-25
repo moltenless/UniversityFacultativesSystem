@@ -1,0 +1,65 @@
+*repository teachers
+procedure insert_teacher_and_create_user
+procedure delete_teacher_and_user
+update
+select where id
+select *
+
+*repository students
+procedure insert_student_and_create_user
+procedure delete_student_and_user
+update
+select where id
+select *
+
+*repository subjects
+insert 
+update
+delete
+select where id
+select * 
+
+*repository semesters
+insert
+update
+delete
+select where id
+select *
+
+*repository facultativecourses
+delete
+update
+insert
+select where teacher
+select where subject
+select where id
+select where *
+view facultativescourses_inclusive_view
+
+*repository enrollments
+delete
+insert
+select where student
+select where course
+select where id
+select *
+view enrollments_inclusive_view
+
+*repository semesters_grades
+delete
+update
+insert
+select where semester
+select where enrollment
+select where student and where course
+select where id
+select *
+view semesters_grades_inclusive_view
+procedure modifygrades
+
+*repository logins
+select * from teacher_logins
+select * from student_logins
+
+
+checking login and password validation

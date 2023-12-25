@@ -1,0 +1,46 @@
+1 deanery
+grant
+full access for teachers
+create user    
+full access for subjects
+full access for students
+create user    
+full access for semesters
+full access for facultativecourses	  
+full access for enrollments		  
+full access for semesters_grades
+full access for teacher_logins
+full access for student_logins
+(insert_teacher_and_create_user)
+(delete_teacher_and_user)
+(insert_student_and_create_user)
+(delete_student_and_user)
+(перевірити чи студент достатню кількість факультетів обрав)
+(порахувати результуючу оцінку середню/загальну) 
+
+2 teacher
+select teachers
+select subjects
+select students
+select semesters
+insert facultativecourses
+select facultativecourses
+select enrollments
+insert semesters_grades
+select semesters_grades
+(modify_grades)
+
+3 student
+select teachers
+select subjects
+select students
+select semesters
+select facultativecourses
+insert enrollments
+select enrollments
+select semesters_grades
+перегладти на які курси факультативів записаний і їхня кількість
+
+4 system 
+інкрементувати значення кількості факультативів, на які записаний студент
+декрементувати це

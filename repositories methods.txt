@@ -65,3 +65,21 @@ select * from student_logins
 checking login and password validation ??????
 
 $"Server=localhost; database=ekom; UID=root; password=myfuckingsql"
+
+
+
+using (MySqlConnection connection = new MySqlConnection($"Server=localhost; database=ekom; UID=root; password=myfuckingsql"))
+            {
+                connection.Open();
+
+                string query = $"delete from indemnification; ";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.ExecuteNonQuery();
+
+                for (int i = 0; i < table.Count; i++)
+                {
+                    query = $"INSERT INTO ekom.indemnification (id, id_pollution, value_2019, value_2020, value_2021) VALUES ('{i + 1}', '{i + 1}', '{table[i].value_2019}', '{table[i].value_2020}', '{table[i].value_2021}');";
+                    command = new MySqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                }
+            }

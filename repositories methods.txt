@@ -62,4 +62,6 @@ select * from teacher_logins
 select * from student_logins
 
 
-checking login and password validation
+checking login and password validation ??????
+
+$"Server=localhost; database=ekom; UID=root; password=myfuckingsql"

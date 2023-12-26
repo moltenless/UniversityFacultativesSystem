@@ -16,8 +16,9 @@ namespace UniversityFacultativesDAL.Service.Tests
         public void GetTeacherTest()
         {
             DeaneryService deaneryService = new DeaneryService("deanery", "deanery32188");
-            deaneryService.Close();
-            Assert.AreEqual(true, true);
+
+
+            Assert.AreEqual(" ", "");
         }
 
         //[TestMethod()]

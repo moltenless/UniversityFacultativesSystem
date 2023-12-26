@@ -105,7 +105,13 @@
     <Compile Include="Entity\UserLogin.cs" />
     <Compile Include="Entity\Semester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CoursesRepository.cs" />
+    <Compile Include="Repository\EnrollmentsRepository.cs" />
+    <Compile Include="Repository\GradesRepository.cs" />
+    <Compile Include="Repository\LoginsRepository.cs" />
+    <Compile Include="Repository\SemestersRepository.cs" />
     <Compile Include="Repository\StudentsRepository.cs" />
+    <Compile Include="Repository\SubjectsRepository.cs" />
     <Compile Include="Repository\TeachersRepository.cs" />
     <Compile Include="Service\DeaneryService.cs" />
   </ItemGroup>

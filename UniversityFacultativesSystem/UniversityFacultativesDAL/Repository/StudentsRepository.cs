@@ -18,7 +18,7 @@ namespace UniversityFacultativesDAL.Repository
         {
             string query = $"call insert_student_and_create_user" +
                 $"('{student.LastName}', '{student.FirstName}', '{student.MiddleName}'," +
-                $" '{student.Group}', '{student.Address}', '{student.Phone}', 0);";
+                $" '{student.Group}', '{student.Address}', '{student.Phone}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();
@@ -69,7 +69,7 @@ namespace UniversityFacultativesDAL.Repository
             return students;
         }
 
-        internal Student SelectId(int id)
+        internal Student Select(int id)
         {
             Student student;
             string query = $"select * from students where id = {id};";

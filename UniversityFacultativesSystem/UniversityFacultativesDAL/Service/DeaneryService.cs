@@ -14,6 +14,7 @@ namespace UniversityFacultativesDAL.Service
         private readonly MySqlConnection connection;
 
         private readonly TeachersRepository teachersRepository;
+        private readonly StudentsRepository studentsRepository;
 
         public DeaneryService(string user, string password)
         {
@@ -21,7 +22,14 @@ namespace UniversityFacultativesDAL.Service
             connection.Open();
 
             teachersRepository = new TeachersRepository(connection);
+            studentsRepository = new StudentsRepository(connection);
+
+
+
+            connection.Close();
         }
+
+
 
         public void Close() => connection.Close();
     }

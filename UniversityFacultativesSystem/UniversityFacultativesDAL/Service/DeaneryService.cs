@@ -23,10 +23,6 @@ namespace UniversityFacultativesDAL.Service
 
             teachersRepository = new TeachersRepository(connection);
             studentsRepository = new StudentsRepository(connection);
-
-
-
-            connection.Close();
         }
 
 

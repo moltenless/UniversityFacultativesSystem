@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityFacultativesDAL", "UniversityFacultativesDAL\UniversityFacultativesDAL.csproj", "{CB37685F-9F91-4F04-9BBA-D9DEFD8FE439}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityFacultativesDALTests", "UniversityFacultativesDALTests\UniversityFacultativesDALTests.csproj", "{6D5829D3-A9F0-4EA1-BEE0-CA0EC1CF4DC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CB37685F-9F91-4F04-9BBA-D9DEFD8FE439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB37685F-9F91-4F04-9BBA-D9DEFD8FE439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB37685F-9F91-4F04-9BBA-D9DEFD8FE439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D5829D3-A9F0-4EA1-BEE0-CA0EC1CF4DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5829D3-A9F0-4EA1-BEE0-CA0EC1CF4DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5829D3-A9F0-4EA1-BEE0-CA0EC1CF4DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5829D3-A9F0-4EA1-BEE0-CA0EC1CF4DC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

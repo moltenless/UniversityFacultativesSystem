@@ -8,12 +8,12 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class SemestersRepository
+    public class SemestersRepository
     {
         private readonly MySqlConnection connection;
-        internal SemestersRepository(MySqlConnection connection) => this.connection = connection;
+        public SemestersRepository(MySqlConnection connection) => this.connection = connection;
 
-        internal void Insert(Semester semester)
+        public void AddNew(Semester semester)
         {
             string query = $"insert semesters value ('{semester.BeginningDate}', '{semester.EndDate}', '{semester.StudentsMinCoursesCount}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -22,7 +22,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Update(int id, Semester semester)
+        public void ChangeInfo(int id, Semester semester)
         {
             string query = $"update semesters set beginning_date = '{semester.BeginningDate}', end_date = '{semester.EndDate}', students_min_subjects_count = '{semester.StudentsMinCoursesCount}' where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -31,7 +31,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Delete(int id)
+        public void Remove(int id)
         {
             string query = $"delete from semesters where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -40,7 +40,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal List<Semester> SelectAll()
+        public List<Semester> GetAll()
         {
             List<Semester> semesters = new List<Semester>();
             string query = $"select * from semesters;";
@@ -60,7 +60,7 @@ namespace UniversityFacultativesDAL.Repository
             return semesters;
         }
 
-        internal Semester Select(int id)
+        public Semester Get(int id)
         {
             Semester semester;
             string query = $"select * from semesters where id = {id};";

@@ -9,12 +9,12 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class SubjectsRepository
+    public class SubjectsRepository
     {
         private readonly MySqlConnection connection;
-        internal SubjectsRepository(MySqlConnection connection) => this.connection = connection;
+        public SubjectsRepository(MySqlConnection connection) => this.connection = connection;
 
-        internal void Insert(Subject subject)
+        public void AddNew(Subject subject)
         {
             string query = $"insert subjects value ('{subject.Name}', '{subject.Description}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -23,7 +23,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Update(int id, Subject subject)
+        public void ChangeInfo(int id, Subject subject)
         {
             string query = $"update subjects set name = '{subject.Name}', description = '{subject.Description}' where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -32,7 +32,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Delete(int id)
+        public void Remove(int id)
         {
             string query = $"delete from subjects where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -41,7 +41,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal List<Subject> SelectAll()
+        public List<Subject> GetAll()
         {
             List<Subject> subjects = new List<Subject>();
             string query = $"select * from subjects;";
@@ -60,7 +60,7 @@ namespace UniversityFacultativesDAL.Repository
             return subjects;
         }
 
-        internal Subject Select(int id)
+        public Subject Get(int id)
         {
             Subject subject;
             string query = $"select * from subjects where id = {id};";

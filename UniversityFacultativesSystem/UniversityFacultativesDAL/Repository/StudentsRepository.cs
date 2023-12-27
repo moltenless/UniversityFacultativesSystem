@@ -8,13 +8,13 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class StudentsRepository
+    public class StudentsRepository
     {
         private readonly MySqlConnection connection;
-        internal StudentsRepository(MySqlConnection connection) => this.connection = connection;
+        public StudentsRepository(MySqlConnection connection) => this.connection = connection;
 
 
-        internal void InsertStudentAndCreateUser(Student student)
+        public void RegisterNew(Student student)
         {
             string query = $"call insert_student_and_create_user" +
                 $"('{student.LastName}', '{student.FirstName}', '{student.MiddleName}'," +
@@ -25,7 +25,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void DeleteStudentAndUser(int id)
+        public void Unregister(int id)
         {
             string query = $"call delete_student_and_user({id});";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -34,7 +34,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Update(int id, Student student)
+        public void ChangeInfo(int id, Student student)
         {
             string query = $"update students set last_name = '{student.LastName}', first_name = '{student.FirstName}', " +
                 $"middle_name = '{student.MiddleName}', group_name = '{student.Group}', address = '{student.Address}', " +
@@ -45,7 +45,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal List<Student> SelectAll()
+        public List<Student> GetAll()
         {
             List<Student> students = new List<Student>();
             string query = $"select * from students;";
@@ -69,7 +69,7 @@ namespace UniversityFacultativesDAL.Repository
             return students;
         }
 
-        internal Student Select(int id)
+        public Student Get(int id)
         {
             Student student;
             string query = $"select * from students where id = {id};";

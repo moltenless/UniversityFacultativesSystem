@@ -5,12 +5,12 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class EnrollmentsRepository
+    public class EnrollmentsRepository
     {
         private readonly MySqlConnection connection;
-        internal EnrollmentsRepository(MySqlConnection connection) => this.connection = connection;
+        public EnrollmentsRepository(MySqlConnection connection) => this.connection = connection;
 
-        internal void Insert(Enrollment enrollment)
+        public void AddNew(Enrollment enrollment)
         {
             string query = $"insert enrollments value " +
                 $"('{enrollment.StudentId}', '{enrollment.CourseId}');";
@@ -20,7 +20,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Delete(int id)
+        public void Remove(int id)
         {
             string query = $"delete from enrollments where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -29,7 +29,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal List<Enrollment> SelectAll()
+        public List<Enrollment> GetAll()
         {
             List<Enrollment> enrollments = new List<Enrollment>();
             string query = $"select * from enrollments;";
@@ -48,7 +48,7 @@ namespace UniversityFacultativesDAL.Repository
             return enrollments;
         }
 
-        internal Enrollment Select(int id)
+        public Enrollment Get(int id)
         {
             Enrollment enrollment;
             string query = $"select * from enrollments where id = {id};";
@@ -65,7 +65,7 @@ namespace UniversityFacultativesDAL.Repository
             return enrollment;
         }
 
-        internal Enrollment SelectByStudent(int studentId)
+        public Enrollment GetWithStudent(int studentId)
         {
             Enrollment enrollment;
             string query = $"select * from enrollments where student_id = {studentId};";
@@ -82,7 +82,7 @@ namespace UniversityFacultativesDAL.Repository
             return enrollment;
         }
 
-        internal Enrollment SelectByCourse(int courseId)
+        public Enrollment GetWithCourse(int courseId)
         {
             Enrollment enrollment;
             string query = $"select * from enrollments where course_id = {courseId};";
@@ -99,7 +99,7 @@ namespace UniversityFacultativesDAL.Repository
             return enrollment;
         }
 
-        internal List<DetailedEnrollment> SelectAllDetailed()
+        public List<DetailedEnrollment> GetAllDetailed()
         {
             List<DetailedEnrollment> enrollments = new List<DetailedEnrollment>();
             string query = $"select * from enrollments_inclusive_view;";

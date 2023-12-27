@@ -8,12 +8,12 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class GradesRepository
+    public class GradesRepository
     {
         private readonly MySqlConnection connection;
-        internal GradesRepository(MySqlConnection connection) => this.connection = connection;
+        public GradesRepository(MySqlConnection connection) => this.connection = connection;
 
-        internal void Insert(Grade grade)
+        public void AddNew(Grade grade)
         {
             string query = $"insert semesters_grades value ('{grade.SemesterId}', '{grade.EnrollmentId}', '{grade.Value}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -22,7 +22,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Update(int id, Grade grade)
+        public void ChangeInfo(int id, Grade grade)
         {
             string query = $"update semesters_grades set semester_id = '{grade.SemesterId}', enrollment_id = '{grade.EnrollmentId}'," +
                 $" grade = '{grade.Value}' where id = {id};";
@@ -32,7 +32,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Delete(int id)
+        public void Remove(int id)
         {
             string query = $"delete from semesters_grades where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -41,7 +41,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal List<Grade> SelectAll()
+        public List<Grade> GetAll()
         {
             List<Grade> grades = new List<Grade>();
             string query = $"select * from semesters_grades;";
@@ -61,7 +61,7 @@ namespace UniversityFacultativesDAL.Repository
             return grades;
         }
 
-        internal Grade Select(int id)
+        public Grade Get(int id)
         {
             Grade grade;
             string query = $"select * from semesters_grades where id = {id};";
@@ -79,7 +79,7 @@ namespace UniversityFacultativesDAL.Repository
             return grade;
         }
 
-        internal Grade SelectBySemester(int semesterId)
+        public Grade GetWithSemester(int semesterId)
         {
             Grade grade;
             string query = $"select * from semesters_grades where semester_id = {semesterId};";
@@ -97,7 +97,7 @@ namespace UniversityFacultativesDAL.Repository
             return grade;
         }
 
-        internal Grade SelectByEnrollment(int enrollmentId)
+        public Grade GetWithEnrollment(int enrollmentId)
         {
             Grade grade;
             string query = $"select * from semesters_grades where enrollment_id = {enrollmentId};";
@@ -115,7 +115,7 @@ namespace UniversityFacultativesDAL.Repository
             return grade;
         }
 
-        internal List<DetailedGrade> SelectAllDetailed()
+        public List<DetailedGrade> GetAllDetailed()
         {
             List<DetailedGrade> grades = new List<DetailedGrade>();
             string query = $"select * from semesters_grades_inclusive_view;";
@@ -136,29 +136,29 @@ namespace UniversityFacultativesDAL.Repository
                             reader.GetString(7),
                             reader.GetString(8),
                             reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetInt32(9),
-                            reader.GetInt32(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetInt32(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetString(9),
-                            reader.GetInt32(10)));
+                            reader.GetString(10),
+                            reader.GetString(11),
+                            reader.GetString(12),
+                            reader.GetString(13),
+                            reader.GetInt32(14),
+                            reader.GetInt32(15),
+                            reader.GetString(16),
+                            reader.GetString(17),
+                            reader.GetInt32(18),
+                            reader.GetString(19),
+                            reader.GetString(20),
+                            reader.GetString(21),
+                            reader.GetString(22),
+                            reader.GetString(23),
+                            reader.GetString(24),
+                            reader.GetInt32(25)));
                     }
                 }
             }
             return grades;
         }
 
-        internal void ModifyGrades(int semesterId, int teacherId, int value)
+        public void ModifyGrades(int semesterId, int teacherId, int value)
         {
             string query = $"call modifygrades({semesterId}, {teacherId}, {value});";
             using (MySqlCommand command = new MySqlCommand(query, connection))

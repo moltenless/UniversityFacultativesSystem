@@ -5,12 +5,12 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class CoursesRepository
+    public class CoursesRepository
     {
         private readonly MySqlConnection connection;
-        internal CoursesRepository(MySqlConnection connection) => this.connection = connection;
+        public CoursesRepository(MySqlConnection connection) => this.connection = connection;
 
-        internal void Insert(Course course)
+        public void AddNew(Course course)
         {
             string query = $"insert facultativecourses value ('{course.SubjectId}', '{course.TeacherId}', '{course.Hours}', '{course.Type}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -19,7 +19,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Update(int id, Course course)
+        public void ChangeInfo(int id, Course course)
         {
             string query = $"update facultativecourses set subject_id = '{course.SubjectId}', teacher_id = '{course.TeacherId}'," +
                 $" hours = '{course.Hours}', type = '{course.Type}' where id = {id};";
@@ -29,7 +29,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal void Delete(int id)
+        public void Remove(int id)
         {
             string query = $"delete from facultativecourses where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -38,7 +38,7 @@ namespace UniversityFacultativesDAL.Repository
             }
         }
 
-        internal List<Course> SelectAll()
+        public List<Course> GetAll()
         {
             List<Course> courses = new List<Course>();
             string query = $"select * from facultativecourses;";
@@ -59,7 +59,7 @@ namespace UniversityFacultativesDAL.Repository
             return courses;
         }
 
-        internal Course Select(int id)
+        public Course Get(int id)
         {
             Course course;
             string query = $"select * from facultativecourses where id = {id};";
@@ -78,7 +78,7 @@ namespace UniversityFacultativesDAL.Repository
             return course;
         }
 
-        internal Course SelectByTeacher(int teacherId)
+        public Course GetWithTeacher(int teacherId)
         {
             Course course;
             string query = $"select * from facultativecourses where teacher_id = {teacherId};";
@@ -97,7 +97,7 @@ namespace UniversityFacultativesDAL.Repository
             return course;
         }
 
-        internal Course SelectBySubject(int subjectId)
+        public Course GetWithSubject(int subjectId)
         {
             Course course;
             string query = $"select * from facultativecourses where subject_id = {subjectId};";
@@ -116,7 +116,7 @@ namespace UniversityFacultativesDAL.Repository
             return course;
         }
 
-        internal List<DetailedCourse> SelectAllDetailed()
+        public List<DetailedCourse> GetAllDetailed()
         {
             List<DetailedCourse> courses = new List<DetailedCourse>();
             string query = $"select * from facultativescourses_inclusive_view;";

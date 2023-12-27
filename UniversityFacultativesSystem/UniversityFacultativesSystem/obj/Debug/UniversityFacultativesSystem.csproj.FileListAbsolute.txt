@@ -7,4 +7,4 @@ D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\o
 D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.csproj.CoreCompileInputs.cache
 D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.exe
 D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.pdb
-D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.LoginForm.resources
+D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.StartForm.resources

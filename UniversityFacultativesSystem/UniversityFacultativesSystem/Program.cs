@@ -8,7 +8,7 @@ namespace UniversityFacultativesSystem
 {
     internal static class Program
     {
-        internal static FormSwitcher FormSwitcher { get; private set; }
+        private static ApplicationContext applicationContext;
 
         /// <summary>
         /// The main entry point for the application.
@@ -18,8 +18,16 @@ namespace UniversityFacultativesSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormSwitcher = new FormSwitcher(new PlaceHereYourInitialForm());
-            Application.Run(FormSwitcher.ApplicationContext);
+            applicationContext = new ApplicationContext(initialForm);
+            Application.Run(applicationContext);
+        }
+
+        internal static void GoTo(Form _new)
+        {
+            Form old = applicationContext.MainForm;
+            applicationContext.MainForm = _new;
+            old.Close();
+            _new.Show();
         }
     }
 }

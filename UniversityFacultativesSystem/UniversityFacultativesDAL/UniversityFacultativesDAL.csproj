@@ -113,7 +113,7 @@
     <Compile Include="Repository\StudentsRepository.cs" />
     <Compile Include="Repository\SubjectsRepository.cs" />
     <Compile Include="Repository\TeachersRepository.cs" />
-    <Compile Include="Service\DeaneryService.cs" />
+    <Compile Include="Service\DataService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿namespace UniversityFacultativesSystem
 {
-    partial class StartForm
+    partial class DeaneryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,47 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.teacherButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.deaneryButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.studentButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // teacherButton
-            // 
-            this.teacherButton.BackColor = System.Drawing.Color.AliceBlue;
-            this.teacherButton.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.teacherButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSkyBlue;
-            this.teacherButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
-            this.teacherButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.teacherButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.teacherButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teacherButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.teacherButton.Location = new System.Drawing.Point(325, 448);
-            this.teacherButton.Name = "teacherButton";
-            this.teacherButton.Size = new System.Drawing.Size(160, 52);
-            this.teacherButton.TabIndex = 0;
-            this.teacherButton.Tag = "2";
-            this.teacherButton.Text = "Викладач";
-            this.teacherButton.UseVisualStyleBackColor = false;
-            this.teacherButton.Click += new System.EventHandler(this.RoleClicked);
-            this.teacherButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
-            this.teacherButton.MouseLeave += new System.EventHandler(this.MouseLeftRoles);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UniversityFacultativesSystem.Properties.Resources.education_computer_school_graduate_cap_monitor_icon_1496801;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(397, 364);
+            this.pictureBox1.Size = new System.Drawing.Size(214, 212);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -90,9 +64,6 @@
             this.deaneryButton.Tag = "1";
             this.deaneryButton.Text = "Деканат";
             this.deaneryButton.UseVisualStyleBackColor = false;
-            this.deaneryButton.Click += new System.EventHandler(this.RoleClicked);
-            this.deaneryButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
-            this.deaneryButton.MouseLeave += new System.EventHandler(this.MouseLeftRoles);
             // 
             // closeButton
             // 
@@ -133,7 +104,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(130, 31);
+            this.label1.Location = new System.Drawing.Point(219, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(550, 37);
             this.label1.TabIndex = 5;
@@ -153,101 +124,35 @@
     "оль:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // studentButton
-            // 
-            this.studentButton.BackColor = System.Drawing.Color.AliceBlue;
-            this.studentButton.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.studentButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSkyBlue;
-            this.studentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
-            this.studentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.studentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.studentButton.Location = new System.Drawing.Point(491, 448);
-            this.studentButton.Name = "studentButton";
-            this.studentButton.Size = new System.Drawing.Size(160, 52);
-            this.studentButton.TabIndex = 7;
-            this.studentButton.Tag = "3";
-            this.studentButton.Text = "Студент";
-            this.studentButton.UseVisualStyleBackColor = false;
-            this.studentButton.Click += new System.EventHandler(this.RoleClicked);
-            this.studentButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
-            this.studentButton.MouseLeave += new System.EventHandler(this.MouseLeftRoles);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(218, 503);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 37);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "^";
-            this.label3.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(389, 503);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 37);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "^";
-            this.label4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(555, 503);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 37);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "^";
-            this.label5.Visible = false;
-            // 
-            // StartForm
+            // DeaneryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(810, 557);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.studentButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.deaneryButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.teacherButton);
             this.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StartForm";
+            this.Name = "DeaneryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вхід";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button teacherButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button deaneryButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button studentButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
     }
 }

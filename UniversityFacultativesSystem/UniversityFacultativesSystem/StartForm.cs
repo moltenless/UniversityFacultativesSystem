@@ -12,8 +12,8 @@ namespace UniversityFacultativesSystem
             InitializeComponent();
             this.Style(3.6f, Color.LightSkyBlue);
             Icon = Resources.education_computer_school_graduate_cap_monitor_icon_149680;
-            deaneryButton.Style(2f, Color.LightSkyBlue);
             teacherButton.Style(2f, Color.LightSkyBlue);
+            deaneryButton.Style(2f, Color.LightSkyBlue);
             studentButton.Style(2f, Color.LightSkyBlue);
             closeButton.Style(1.6f, Color.LightSkyBlue);
             minimizeButton.Style(1.6f, Color.LightSkyBlue);
@@ -21,7 +21,8 @@ namespace UniversityFacultativesSystem
 
         private void RoleClicked(object sender, EventArgs e)
         {
-
+            LoginForm.Role role = (LoginForm.Role)Enum.ToObject(typeof(LoginForm.Role), int.Parse((sender as Control).Tag.ToString()));
+            Program.GoTo(new LoginForm(role));
         }
 
         private void Close(object sender, EventArgs e) => this.Close();

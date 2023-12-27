@@ -9,12 +9,12 @@ using UniversityFacultativesDAL.Repository;
 
 namespace UniversityFacultativesDAL.Service
 {
-    public class DeaneryService
+    public class DataService
     {
         private readonly MySqlConnection connection;
         private readonly string userName;
 
-        public DeaneryService(string user, string password)
+        public DataService(string user, string password)
         {
             connection = new MySqlConnection($"Server=localhost; database=course; UID={user}; password={password}");
             connection.Open();

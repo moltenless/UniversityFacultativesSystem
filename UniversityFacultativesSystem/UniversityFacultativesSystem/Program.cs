@@ -18,7 +18,7 @@ namespace UniversityFacultativesSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormSwitcher = new FormSwitcher(new Form1());
+            FormSwitcher = new FormSwitcher(new PlaceHereYourInitialForm());
             Application.Run(FormSwitcher.ApplicationContext);
         }
     }

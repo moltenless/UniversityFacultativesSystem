@@ -12,20 +12,43 @@ namespace UniversityFacultativesDAL.Service
     public class DeaneryService
     {
         private readonly MySqlConnection connection;
-
-        private readonly TeachersRepository teachersRepository;
-        private readonly StudentsRepository studentsRepository;
+        private readonly string userName;
 
         public DeaneryService(string user, string password)
         {
             connection = new MySqlConnection($"Server=localhost; database=course; UID={user}; password={password}");
             connection.Open();
+            userName = user;
 
-            teachersRepository = new TeachersRepository(connection);
-            studentsRepository = new StudentsRepository(connection);
+            Teachers = new TeachersRepository(connection);
+            Students = new StudentsRepository(connection);
+            Subjects = new SubjectsRepository(connection);
+            Semesters = new SemestersRepository(connection);
+            Courses = new CoursesRepository(connection);
+            Enrollments = new EnrollmentsRepository(connection);
+            Grades = new GradesRepository(connection);
+
+            logins = new LoginsRepository(connection);
+
         }
 
+        public TeachersRepository Teachers { get; }
+        public StudentsRepository Students { get; }
+        public SubjectsRepository Subjects { get; }
+        public SemestersRepository Semesters { get; }
+        public CoursesRepository Courses { get; }
+        public EnrollmentsRepository Enrollments { get; }
+        public GradesRepository Grades { get; }
 
+        private LoginsRepository logins;
+        public LoginsRepository Logins
+        {
+            get
+            {
+                if (userName == "deanery") return logins;
+                else return null;
+            }
+        }
 
         public void Close() => connection.Close();
     }

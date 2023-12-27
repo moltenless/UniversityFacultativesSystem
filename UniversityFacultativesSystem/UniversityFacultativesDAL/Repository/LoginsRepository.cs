@@ -4,12 +4,12 @@ using UniversityFacultativesDAL.Entity;
 
 namespace UniversityFacultativesDAL.Repository
 {
-    internal class LoginsRepository
+    public class LoginsRepository
     {
         private readonly MySqlConnection connection;
-        internal LoginsRepository(MySqlConnection connection) => this.connection = connection;
+        public LoginsRepository(MySqlConnection connection) => this.connection = connection;
 
-        internal List<UserLogin> SelectTeachersLogins()
+        public List<UserLogin> GetTeachersLogins()
         {
             List<UserLogin> teachers = new List<UserLogin>();
             string query = $"select * from teacher_logins;";
@@ -28,7 +28,7 @@ namespace UniversityFacultativesDAL.Repository
             return teachers;
         }
 
-        internal List<UserLogin> SelectStudentsLogins()
+        public List<UserLogin> GetStudentsLogins()
         {
             List<UserLogin> students = new List<UserLogin>();
             string query = $"select * from student_logins;";

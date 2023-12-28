@@ -65,7 +65,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::UniversityFacultativesSystem.Properties.Resources.education_computer_school_graduate_cap_monitor_icon_1496801;
+            this.pictureBox1.Image = global::UniversityFacultativesSystem.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(207, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(397, 364);

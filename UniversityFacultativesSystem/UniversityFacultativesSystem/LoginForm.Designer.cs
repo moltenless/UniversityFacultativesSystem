@@ -61,7 +61,7 @@
             this.loginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.loginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.Font = new System.Drawing.Font("Ink Free", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.loginButton.Location = new System.Drawing.Point(12, 493);
             this.loginButton.Name = "loginButton";
@@ -81,7 +81,7 @@
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeButton.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.closeButton.Location = new System.Drawing.Point(353, 12);
             this.closeButton.Name = "closeButton";
@@ -98,7 +98,7 @@
             this.minimizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.minimizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minimizeButton.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minimizeButton.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.minimizeButton.Location = new System.Drawing.Point(320, 12);
             this.minimizeButton.Name = "minimizeButton";
@@ -111,9 +111,9 @@
             // roleLabel
             // 
             this.roleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roleLabel.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.roleLabel.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.roleLabel.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.roleLabel.Location = new System.Drawing.Point(12, 327);
+            this.roleLabel.Location = new System.Drawing.Point(12, 323);
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(369, 26);
             this.roleLabel.TabIndex = 6;
@@ -138,7 +138,7 @@
             this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.backButton.Location = new System.Drawing.Point(12, 12);
             this.backButton.Name = "backButton";
@@ -151,9 +151,9 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Ink Free", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(143, 359);
+            this.label1.Location = new System.Drawing.Point(143, 357);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 26);
             this.label1.TabIndex = 12;
@@ -163,9 +163,9 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Ink Free", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(142, 420);
+            this.label2.Location = new System.Drawing.Point(142, 418);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 26);
             this.label2.TabIndex = 13;
@@ -176,12 +176,12 @@
             // 
             this.loginTextbox.BackColor = System.Drawing.Color.LightSkyBlue;
             this.loginTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginTextbox.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginTextbox.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginTextbox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.loginTextbox.Location = new System.Drawing.Point(77, 388);
             this.loginTextbox.MaxLength = 30;
             this.loginTextbox.Name = "loginTextbox";
-            this.loginTextbox.Size = new System.Drawing.Size(239, 25);
+            this.loginTextbox.Size = new System.Drawing.Size(239, 29);
             this.loginTextbox.TabIndex = 14;
             this.loginTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -189,7 +189,7 @@
             // 
             this.passwordTextbox.BackColor = System.Drawing.Color.LightSkyBlue;
             this.passwordTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTextbox.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordTextbox.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordTextbox.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.passwordTextbox.Location = new System.Drawing.Point(77, 449);
             this.passwordTextbox.MaxLength = 20;
@@ -202,10 +202,10 @@
             // abcCheckbox
             // 
             this.abcCheckbox.AutoSize = true;
-            this.abcCheckbox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.abcCheckbox.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.abcCheckbox.Location = new System.Drawing.Point(257, 424);
             this.abcCheckbox.Name = "abcCheckbox";
-            this.abcCheckbox.Size = new System.Drawing.Size(59, 25);
+            this.abcCheckbox.Size = new System.Drawing.Size(70, 25);
             this.abcCheckbox.TabIndex = 16;
             this.abcCheckbox.Text = "АБВ";
             this.abcCheckbox.UseVisualStyleBackColor = true;

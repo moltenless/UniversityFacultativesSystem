@@ -16,7 +16,7 @@ namespace UniversityFacultativesDAL.Repository
 
         public void AddNew(Subject subject)
         {
-            string query = $"insert subjects value ('{subject.Name}', '{subject.Description}');";
+            string query = $"insert subjects (name, description) value ('{subject.Name}', '{subject.Description}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();

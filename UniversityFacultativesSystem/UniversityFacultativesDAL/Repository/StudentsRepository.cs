@@ -38,7 +38,7 @@ namespace UniversityFacultativesDAL.Repository
         {
             string query = $"update students set last_name = '{student.LastName}', first_name = '{student.FirstName}', " +
                 $"middle_name = '{student.MiddleName}', group_name = '{student.Group}', address = '{student.Address}', " +
-                $"phone = '{student.Phone}', facultatives_taken = '{student.CoursesTaken}' where id = {id};";
+                $"phone = '{student.Phone}' where id = {id};";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();

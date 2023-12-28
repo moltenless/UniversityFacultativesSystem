@@ -1,32 +1,32 @@
-*repository teachers
+*repository teachers  ------------------------------ 4 crrud  
 procedure insert_teacher_and_create_user
 procedure delete_teacher_and_user
 update
 select where id
 select *
 
-*repository students
+*repository students ------------------------------- 4 crrud
 procedure insert_student_and_create_user
 procedure delete_student_and_user
 update
 select where id
 select *
 
-*repository subjects
+*repository subjects ---------------------------------- 4 crrud
 insert 
 update
 delete
 select where id
 select * 
 
-*repository semesters
+*repository semesters ----------------------------------4 crrud
 insert
 update
 delete
 select where id
 select *
 
-*repository facultativecourses
+*repository facultativecourses -------------------------4 crrud +++	 *deanery doesn't insert here
 delete
 update
 insert
@@ -36,7 +36,7 @@ select where id
 select where *
 view facultativescourses_inclusive_view
 
-*repository enrollments
+*repository enrollments -------------------------------4 crrud +++ -update =) 		*deanery doesn't insert here
 delete
 insert
 select where student
@@ -45,7 +45,7 @@ select where id
 select *
 view enrollments_inclusive_view
 
-*repository semesters_grades
+*repository semesters_grades------------------------------4 crrud +++ +both_where +modify		*deanery doesn't  insert here, doesn't modify here
 delete
 update
 insert
@@ -57,8 +57,8 @@ select *
 view semesters_grades_inclusive_view
 procedure modifygrades
 
-*repository logins
+*repository logins -------------------------------------------select only
 select * from teacher_logins
 select * from student_logins
 
-
+--------------------------------------------------------------------deanery checks min courses enrollments and shows result grade and shows best student*

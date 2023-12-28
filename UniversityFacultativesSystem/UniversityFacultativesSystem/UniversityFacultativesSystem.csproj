@@ -106,13 +106,13 @@
     <None Include="Resources\education_computer_school_graduate_cap_monitor_icon_149680.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\education_computer_school_graduate_cap_monitor_icon_149680.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\UniversityFacultativesDAL\UniversityFacultativesDAL.csproj">
       <Project>{cb37685f-9f91-4f04-9bba-d9defd8fe439}</Project>
       <Name>UniversityFacultativesDAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

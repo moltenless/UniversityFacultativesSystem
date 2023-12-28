@@ -18,7 +18,7 @@ namespace UniversityFacultativesSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            applicationContext = new ApplicationContext(new StartForm());
+            applicationContext = new ApplicationContext(new DeaneryForm("deanery", "deanery32188"));
             Application.Run(applicationContext);
         }
 

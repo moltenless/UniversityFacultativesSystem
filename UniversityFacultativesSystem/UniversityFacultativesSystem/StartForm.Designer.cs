@@ -50,7 +50,7 @@
             this.teacherButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.teacherButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.teacherButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.teacherButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teacherButton.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.teacherButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.teacherButton.Location = new System.Drawing.Point(325, 448);
             this.teacherButton.Name = "teacherButton";
@@ -81,7 +81,7 @@
             this.deaneryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.deaneryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.deaneryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deaneryButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deaneryButton.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deaneryButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.deaneryButton.Location = new System.Drawing.Point(159, 448);
             this.deaneryButton.Name = "deaneryButton";
@@ -101,7 +101,7 @@
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeButton.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.closeButton.Location = new System.Drawing.Point(770, 12);
             this.closeButton.Name = "closeButton";
@@ -118,7 +118,7 @@
             this.minimizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.minimizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minimizeButton.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minimizeButton.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.minimizeButton.Location = new System.Drawing.Point(737, 12);
             this.minimizeButton.Name = "minimizeButton";
@@ -131,7 +131,7 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label1.Location = new System.Drawing.Point(130, 31);
             this.label1.Name = "label1";
@@ -143,7 +143,7 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.label2.Location = new System.Drawing.Point(130, 372);
             this.label2.Name = "label2";
@@ -161,7 +161,7 @@
             this.studentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
             this.studentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.studentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentButton.Font = new System.Drawing.Font("Ink Free", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.studentButton.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.studentButton.Location = new System.Drawing.Point(491, 448);
             this.studentButton.Name = "studentButton";

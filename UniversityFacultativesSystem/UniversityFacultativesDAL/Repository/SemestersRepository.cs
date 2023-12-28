@@ -15,7 +15,7 @@ namespace UniversityFacultativesDAL.Repository
 
         public void AddNew(Semester semester)
         {
-            string query = $"insert semesters value ('{semester.BeginningDate}', '{semester.EndDate}', '{semester.StudentsMinCoursesCount}');";
+            string query = $"insert semesters (beginning_date, end_date, students_min_subjects_count) value ('{semester.BeginningDate}', '{semester.EndDate}', '{semester.StudentsMinCoursesCount}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();

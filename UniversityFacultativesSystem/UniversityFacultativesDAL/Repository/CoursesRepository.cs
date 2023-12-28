@@ -12,7 +12,7 @@ namespace UniversityFacultativesDAL.Repository
 
         public void AddNew(Course course)
         {
-            string query = $"insert facultativecourses value ('{course.SubjectId}', '{course.TeacherId}', '{course.Hours}', '{course.Type}');";
+            string query = $"insert facultativecourses (subject_id, teacher_id, hours, type) value ('{course.SubjectId}', '{course.TeacherId}', '{course.Hours}', '{course.Type}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();

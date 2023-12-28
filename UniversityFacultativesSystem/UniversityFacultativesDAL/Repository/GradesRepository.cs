@@ -15,7 +15,7 @@ namespace UniversityFacultativesDAL.Repository
 
         public void AddNew(Grade grade)
         {
-            string query = $"insert semesters_grades value ('{grade.SemesterId}', '{grade.EnrollmentId}', '{grade.Value}');";
+            string query = $"insert semesters_grades (semester_id, enrollment_id, grade) value ('{grade.SemesterId}', '{grade.EnrollmentId}', '{grade.Value}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();

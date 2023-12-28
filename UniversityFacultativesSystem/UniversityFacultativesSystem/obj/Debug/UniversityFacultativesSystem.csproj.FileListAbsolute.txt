@@ -42,3 +42,4 @@ D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\o
 D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.exe.config
 D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.DeaneryForm.resources
 D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.csproj.CopyComplete
+D:\University\course\UniversityFacultativesSystem\UniversityFacultativesSystem\obj\Debug\UniversityFacultativesSystem.TeacherForm.resources

@@ -12,7 +12,7 @@ namespace UniversityFacultativesDAL.Repository
 
         public void AddNew(Enrollment enrollment)
         {
-            string query = $"insert enrollments value " +
+            string query = $"insert enrollments (student_id, course_id) value " +
                 $"('{enrollment.StudentId}', '{enrollment.CourseId}');";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {

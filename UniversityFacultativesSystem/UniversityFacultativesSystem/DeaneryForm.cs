@@ -43,7 +43,6 @@ namespace UniversityFacultativesSystem
 
         private void DeaneryForm_Load(object sender, EventArgs e)
         {
-            {
                 teacherTable.Controls.Clear();
                 teacherTable.ColumnStyles.Clear();
                 teacherTable.RowStyles.Clear();
@@ -88,9 +87,7 @@ namespace UniversityFacultativesSystem
                         teacherTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
-            }
 
-            {
                 studentsTable.Controls.Clear();
                 studentsTable.ColumnStyles.Clear();
                 studentsTable.RowStyles.Clear();
@@ -101,10 +98,10 @@ namespace UniversityFacultativesSystem
 
                 studentsTable.ColumnCount = 8;
                 List<Student> students = service.Students.GetAll();
-                int n = students.Count;
+                n = students.Count;
                 studentsTable.RowCount = 1 + n;
 
-                string[] titles = { "id", "Прізвище", "Ім'я", "По батькові", "Група", "Адреса", "Номер", "Кількість вибраних курсів"};
+                titles = new string[]{ "id", "Прізвище", "Ім'я", "По батькові", "Група", "Адреса", "Номер", "Кількість вибраних курсів"};
                 for (int i = 0; i < 8; i++)
                 {
                     Label label = new Label();
@@ -137,9 +134,7 @@ namespace UniversityFacultativesSystem
                         studentsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
-            }
 
-            {
                 subjectsTable.Controls.Clear();
                 subjectsTable.ColumnStyles.Clear();
                 subjectsTable.RowStyles.Clear();
@@ -150,10 +145,10 @@ namespace UniversityFacultativesSystem
 
                 subjectsTable.ColumnCount = 4;
                 List<Subject> subjects = service.Subjects.GetAll();
-                int n = subjects.Count;
+                n = subjects.Count;
                 subjectsTable.RowCount = 1 + n + 1;
 
-                string[] titles = { "id", "Назва", "Опис"};
+                titles = new string[]{ "id", "Назва", "Опис"};
                 for (int i = 0; i < 3; i++)
                 {
                     Label label = new Label();
@@ -184,10 +179,8 @@ namespace UniversityFacultativesSystem
                         subjectsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
-            }
 
 
-            {
                 semestersTable.Controls.Clear();
                 semestersTable.ColumnStyles.Clear();
                 semestersTable.RowStyles.Clear();
@@ -198,10 +191,10 @@ namespace UniversityFacultativesSystem
 
                 semestersTable.ColumnCount = 5;
                 List<Semester> semesters = service.Semesters.GetAll();
-                int n = semesters.Count;
+                n = semesters.Count;
                 semestersTable.RowCount = 1 + n + 1;
 
-                string[] titles = { "id", "Дата початку", "Дата кінця", "Мінімальне число курсів студентам" };
+                titles = new string[]{ "id", "Дата початку", "Дата кінця", "Мінімальне число курсів студентам" };
                 for (int i = 0; i < 4; i++)
                 {
                     Label label = new Label();
@@ -230,6 +223,143 @@ namespace UniversityFacultativesSystem
                         semestersTable.Controls.Add(label, col, row);
                         semestersTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
                         semestersTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
+                    }
+                }
+
+
+            {
+                courseTable.Controls.Clear();
+                courseTable.ColumnStyles.Clear();
+                courseTable.RowStyles.Clear();
+                courseTable.ColumnCount = 0;
+                courseTable.RowCount = 0;
+
+                courseTable.AutoScroll = true;
+
+                courseTable.ColumnCount = 6;
+                List<Course> courses = service.Courses.GetAll();
+                n = courses.Count;
+                courseTable.RowCount = 1 + n + 1;
+
+                titles = new string[] { "id", "id предмета", "id викладача",  "Кількість годин" , "Тип"};
+                for (int i = 0; i < 5; i++)
+                {
+                    Label label = new Label();
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.AutoSize = false;
+                    label.Dock = DockStyle.Fill;
+                    label.Font = new Font(GetFont(13), FontStyle.Underline);
+                    label.Text = titles[i];
+                    courseTable.Controls.Add(label, i, 0);
+                }
+
+                for (int row = 1; row < 1 + n; row++)
+                {
+                    string[] fields = { courses[row - 1].Id.ToString(), courses[row - 1].SubjectId.ToString(), courses[row - 1].TeacherId.ToString(), courses[row - 1].Hours.ToString(), courses[row-1].Type };
+
+                    for (int col = 0; col < 5; col++)
+                    {
+                        Label label = new Label();
+                        label.TextAlign = ContentAlignment.MiddleCenter;
+                        label.AutoSize = false;
+                        label.Dock = DockStyle.Fill;
+                        label.Font = GetFont(13);
+                        label.Text = fields[col];
+
+                        courseTable.Controls.Add(label, col, row);
+                        courseTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        courseTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
+                    }
+                }
+            }
+
+            {
+                teacherloginsTables.Controls.Clear();
+                teacherloginsTables.ColumnStyles.Clear();
+                teacherloginsTables.RowStyles.Clear();
+                teacherloginsTables.ColumnCount = 0;
+                teacherloginsTables.RowCount = 0;
+
+                teacherloginsTables.AutoScroll = true;
+
+                teacherloginsTables.ColumnCount = 4;
+                List<UserLogin> logins = service.Logins.GetTeachersLogins();
+                n = logins.Count;
+                teacherloginsTables.RowCount = 1 + n + 1;
+
+                titles = new string[] { "id викладача", "Логін", "Пароль"};
+                for (int i = 0; i < 3; i++)
+                {
+                    Label label = new Label();
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.AutoSize = false;
+                    label.Dock = DockStyle.Fill;
+                    label.Font = new Font(GetFont(13), FontStyle.Underline);
+                    label.Text = titles[i];
+                    teacherloginsTables.Controls.Add(label, i, 0);
+                }
+
+                for (int row = 1; row < 1 + n; row++)
+                {
+                    string[] fields = { logins[row - 1].UserId.ToString(), logins[row - 1].Login, logins[row-1].Password };
+
+                    for (int col = 0; col < 3; col++)
+                    {
+                        Label label = new Label();
+                        label.TextAlign = ContentAlignment.MiddleCenter;
+                        label.AutoSize = false;
+                        label.Dock = DockStyle.Fill;
+                        label.Font = GetFont(13);
+                        label.Text = fields[col];
+
+                        teacherloginsTables.Controls.Add(label, col, row);
+                        teacherloginsTables.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        teacherloginsTables.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
+                    }
+                }
+            }
+
+            {
+                studentloginsTables.Controls.Clear();
+                studentloginsTables.ColumnStyles.Clear();
+                studentloginsTables.RowStyles.Clear();
+                studentloginsTables.ColumnCount = 0;
+                studentloginsTables.RowCount = 0;
+                studentloginsTables.AutoScroll = true;
+                studentloginsTables.ColumnCount = 4;
+
+                List<UserLogin> logins = service.Logins.GetStudentsLogins();
+                n = logins.Count;
+                studentloginsTables.RowCount = 1 + n + 1;
+
+                titles = new string[] { "id студента", "Логін", "Пароль" };
+                for (int i = 0; i < 3; i++)
+                {
+                    Label label = new Label();
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.AutoSize = false;
+                    label.Dock = DockStyle.Fill;
+                    label.Font = new Font(GetFont(13), FontStyle.Underline);
+                    label.Text = titles[i];
+                    studentloginsTables.Controls.Add(label, i, 0);
+                }
+
+                for (int row = 1; row < 1 + n; row++)
+                {
+                    string[] fields = { logins[row - 1].UserId.ToString(), logins[row - 1].Login, logins[row - 1].Password };
+
+                    for (int col = 0; col < 3; col++)
+                    {
+                        Label label = new Label();
+                        label.TextAlign = ContentAlignment.MiddleCenter;
+                        label.AutoSize = false;
+                        label.Dock = DockStyle.Fill;
+                        label.Font = GetFont(13);
+                        label.Text = fields[col];
+
+                        studentloginsTables.Controls.Add(label, col, row);
+                        studentloginsTables.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        studentloginsTables.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
             }
@@ -386,6 +516,46 @@ namespace UniversityFacultativesSystem
                 try
                 {
                     service.Semesters.Remove(int.Parse(semesterid.Text));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Не вдалося видалити", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            DeaneryForm_Load(null, null);
+        }
+
+        private void courseExecute_Click(object sender, EventArgs e)
+        {
+            if (courseadd.Checked)
+            {
+                try
+                {
+                    service.Courses.AddNew(new Course(
+                        -1, int.Parse(coursesubjectid.Text), int.Parse(courseteacherid.Text), int.Parse(coursehours.Text), coursetype.Text));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Не вдалося додати", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (courseupdate.Checked)
+            {
+                try
+                {
+                    service.Courses.ChangeInfo(int.Parse(courseid.Text), new Course(
+                        -1, int.Parse(coursesubjectid.Text), int.Parse(courseteacherid.Text), int.Parse(coursehours.Text), coursetype.Text));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Не вдалося оновити дані", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (coursedelete.Checked)
+            {
+                try
+                {
+                    service.Courses.Remove(int.Parse(courseid.Text));
                 }
                 catch (Exception ex)
                 {

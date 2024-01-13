@@ -114,7 +114,7 @@ BEGIN
     EXECUTE stmt;
     DEALLOCATE PREPARE stmt;
     
-    SET @dynamic_sql = CONCAT('GRANT EXECUTE ON PROCEDURE course.ModifyGrades TO ''', new_username, '''@localhost; ');
+    SET @dynamic_sql = CONCAT('GRANT EXECUTE ON PROCEDURE course.ModifyGrades TO ''', new_username, '''@''localhost''; ');
     PREPARE stmt FROM @dynamic_sql;
     EXECUTE stmt;
     DEALLOCATE PREPARE stmt;

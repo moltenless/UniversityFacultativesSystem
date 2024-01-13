@@ -34,9 +34,8 @@ namespace UniversityFacultativesSystem
 
             label1.Text += $"{current.LastName} {current.FirstName} {current.MiddleName}";
             label3.Text = current.Department;
-            label4.Text = current.FirstName;
-            label5.Text = current.LastName;
-            label6.Text = current.MiddleName;
+
+
         }
 
         private void Close(object sender, EventArgs e) => this.Close();
@@ -53,7 +52,7 @@ namespace UniversityFacultativesSystem
             return new Font("Ink Free", size, FontStyle.Bold);
         }
 
-        private void DeaneryForm_Load(object sender, EventArgs e)
+        private void TeacherForm_Load(object sender, EventArgs e)
         {
             teacherTable.Controls.Clear();
             teacherTable.ColumnStyles.Clear();
@@ -64,10 +63,10 @@ namespace UniversityFacultativesSystem
             teacherTable.AutoScroll = true;
 
 
-            teacherTable.ColumnCount = 6;
+            teacherTable.ColumnCount = 5;
             List<Teacher> teachers = service.Teachers.GetAll();
             int n = teachers.Count;
-            teacherTable.RowCount = 1 + n;
+            teacherTable.RowCount = 1 + n + 1;
 
             string[] titles = { "id", "Прізвище", "Ім'я", "По батькові", "Кафедра" };
             for (int i = 0; i < 5; i++)
@@ -95,7 +94,7 @@ namespace UniversityFacultativesSystem
                     label.Text = fields[col];
 
                     teacherTable.Controls.Add(label, col, row);
-                    teacherTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                    teacherTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.2f));
                     teacherTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                 }
             }
@@ -111,7 +110,7 @@ namespace UniversityFacultativesSystem
             studentsTable.ColumnCount = 8;
             List<Student> students = service.Students.GetAll();
             n = students.Count;
-            studentsTable.RowCount = 1 + n;
+            studentsTable.RowCount = 1 + n + 1;
 
             titles = new string[] { "id", "Прізвище", "Ім'я", "По батькові", "Група", "Адреса", "Номер", "Кількість вибраних курсів" };
             for (int i = 0; i < 8; i++)
@@ -142,7 +141,7 @@ namespace UniversityFacultativesSystem
                     label.Text = fields[col];
 
                     studentsTable.Controls.Add(label, col, row);
-                    studentsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                    studentsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.125f));
                     studentsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                 }
             }
@@ -155,7 +154,7 @@ namespace UniversityFacultativesSystem
 
             subjectsTable.AutoScroll = true;
 
-            subjectsTable.ColumnCount = 4;
+            subjectsTable.ColumnCount = 3;
             List<Subject> subjects = service.Subjects.GetAll();
             n = subjects.Count;
             subjectsTable.RowCount = 1 + n + 1;
@@ -167,7 +166,7 @@ namespace UniversityFacultativesSystem
                 label.TextAlign = ContentAlignment.MiddleCenter;
                 label.AutoSize = false;
                 label.Dock = DockStyle.Fill;
-                label.Font = new Font(GetFont(13), FontStyle.Underline);
+                label.Font = new Font(GetFont(15), FontStyle.Underline);
                 label.Text = titles[i];
                 subjectsTable.Controls.Add(label, i, 0);
             }
@@ -183,12 +182,12 @@ namespace UniversityFacultativesSystem
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     label.AutoSize = false;
                     label.Dock = DockStyle.Fill;
-                    label.Font = GetFont(11);
+                    label.Font = GetFont(15);
                     label.Text = fields[col];
 
                     subjectsTable.Controls.Add(label, col, row);
-                    subjectsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
-                    subjectsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
+                    subjectsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.33f));
+                    subjectsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
                 }
             }
 
@@ -201,7 +200,7 @@ namespace UniversityFacultativesSystem
 
             semestersTable.AutoScroll = true;
 
-            semestersTable.ColumnCount = 5;
+            semestersTable.ColumnCount = 4;
             List<Semester> semesters = service.Semesters.GetAll();
             n = semesters.Count;
             semestersTable.RowCount = 1 + n + 1;
@@ -213,7 +212,7 @@ namespace UniversityFacultativesSystem
                 label.TextAlign = ContentAlignment.MiddleCenter;
                 label.AutoSize = false;
                 label.Dock = DockStyle.Fill;
-                label.Font = new Font(GetFont(13), FontStyle.Underline);
+                label.Font = new Font(GetFont(15), FontStyle.Underline);
                 label.Text = titles[i];
                 semestersTable.Controls.Add(label, i, 0);
             }
@@ -229,12 +228,12 @@ namespace UniversityFacultativesSystem
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     label.AutoSize = false;
                     label.Dock = DockStyle.Fill;
-                    label.Font = GetFont(11);
+                    label.Font = GetFont(15);
                     label.Text = fields[col];
 
                     semestersTable.Controls.Add(label, col, row);
-                    semestersTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
-                    semestersTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
+                    semestersTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.25f));
+                    semestersTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
                 }
             }
 
@@ -248,7 +247,7 @@ namespace UniversityFacultativesSystem
 
                 courseTable.AutoScroll = true;
 
-                courseTable.ColumnCount = 6;
+                courseTable.ColumnCount = 5;
                 List<Course> courses = service.Courses.GetAll();
                 n = courses.Count;
                 courseTable.RowCount = 1 + n + 1;
@@ -279,7 +278,7 @@ namespace UniversityFacultativesSystem
                         label.Text = fields[col];
 
                         courseTable.Controls.Add(label, col, row);
-                        courseTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        courseTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.2f));
                         courseTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
@@ -294,7 +293,7 @@ namespace UniversityFacultativesSystem
 
                 enrollmentsTable.AutoScroll = true;
 
-                enrollmentsTable.ColumnCount = 4;
+                enrollmentsTable.ColumnCount = 3;
                 List<Enrollment> enrollments = service.Enrollments.GetAll();
                 n = enrollments.Count;
                 enrollmentsTable.RowCount = 1 + n + 1;
@@ -325,7 +324,7 @@ namespace UniversityFacultativesSystem
                         label.Text = fields[col];
 
                         enrollmentsTable.Controls.Add(label, col, row);
-                        enrollmentsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        enrollmentsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.33f));
                         enrollmentsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
@@ -340,7 +339,7 @@ namespace UniversityFacultativesSystem
 
                 gradesTable.AutoScroll = true;
 
-                gradesTable.ColumnCount = 5;
+                gradesTable.ColumnCount = 4;
                 List<Grade> grades = service.Grades.GetAll();
                 n = grades.Count;
                 gradesTable.RowCount = 1 + n + 1;
@@ -371,12 +370,17 @@ namespace UniversityFacultativesSystem
                         label.Text = fields[col];
 
                         gradesTable.Controls.Add(label, col, row);
-                        gradesTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        gradesTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.25f));
                         gradesTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
             }
         }
-       
+
+        private void newCourse_Click(object sender, EventArgs e)
+        {
+            service.Courses.AddNew(new Course(-1, int.Parse(subjectidTextbox.Text), current.Id, int.Parse(hoursTextbox.Text), typeTextbox.Text));
+            TeacherForm_Load(null, null);
+        }
     }
 }

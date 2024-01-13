@@ -29,11 +29,11 @@ namespace UniversityFacultativesSystem
             UserLogin login = logins.Find(t => t.Login == user && t.Password == password);
 
             service = new DataService(user, password);
-            current = service.Teachers.Get(login.UserId);
+            current = service.Students.Get(login.UserId);
 
 
             label1.Text += $"{current.LastName} {current.FirstName} {current.MiddleName}";
-            label3.Text = current.Department;
+            //label3.Text = current.Department;
             label4.Text = current.FirstName;
             label5.Text = current.LastName;
             label6.Text = current.MiddleName;

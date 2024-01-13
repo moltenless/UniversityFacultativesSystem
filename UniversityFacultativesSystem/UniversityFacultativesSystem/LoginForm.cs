@@ -68,7 +68,7 @@ namespace UniversityFacultativesSystem
                         success = false;
                         break;
                     }
-                    ///////////////////////////////////////Program.GoTo(new TeacherForm(user, password));
+                    Program.GoTo(new TeacherForm(user, password));
                     break;
                 case Role.Student:
                     int studentId = students.FindIndex(s => s.Login == user && s.Password == password);
@@ -77,7 +77,7 @@ namespace UniversityFacultativesSystem
                         success = false; 
                         break;
                     }
-                    ////////////////////////////////////////Program.GoTo(new StudentForm(user, password));
+                    Program.GoTo(new StudentForm(user, password));
                     break;
             }
 

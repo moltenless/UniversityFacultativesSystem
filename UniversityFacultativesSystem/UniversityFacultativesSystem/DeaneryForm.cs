@@ -19,7 +19,6 @@ namespace UniversityFacultativesSystem
             closeButton.Style(1.6f, Color.LightSkyBlue);
             minimizeButton.Style(1.6f, Color.LightSkyBlue);
             buttonQuit.Style(1.6f, Color.LightSkyBlue);
-            teacherExecute.Style(3.6f, Color.LightSkyBlue);
 
             service = new DataService(user, password);
 
@@ -43,188 +42,188 @@ namespace UniversityFacultativesSystem
 
         private void DeaneryForm_Load(object sender, EventArgs e)
         {
-                teacherTable.Controls.Clear();
-                teacherTable.ColumnStyles.Clear();
-                teacherTable.RowStyles.Clear();
-                teacherTable.ColumnCount = 0;
-                teacherTable.RowCount = 0;
+            teacherTable.Controls.Clear();
+            teacherTable.ColumnStyles.Clear();
+            teacherTable.RowStyles.Clear();
+            teacherTable.ColumnCount = 0;
+            teacherTable.RowCount = 0;
 
-                teacherTable.AutoScroll = true;
+            teacherTable.AutoScroll = true;
 
 
-                teacherTable.ColumnCount = 6;
-                List<Teacher> teachers = service.Teachers.GetAll();
-                int n = teachers.Count;
-                teacherTable.RowCount = 1 + n;
+            teacherTable.ColumnCount = 5;
+            List<Teacher> teachers = service.Teachers.GetAll();
+            int n = teachers.Count;
+            teacherTable.RowCount = 1 + n + 1;
 
-                string[] titles = { "id", "Прізвище", "Ім'я", "По батькові", "Кафедра" };
-                for (int i = 0; i < 5; i++)
+            string[] titles = { "id", "Прізвище", "Ім'я", "По батькові", "Кафедра" };
+            for (int i = 0; i < 5; i++)
+            {
+                Label label = new Label();
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.AutoSize = false;
+                label.Dock = DockStyle.Fill;
+                label.Font = new Font(GetFont(13), FontStyle.Underline);
+                label.Text = titles[i];
+                teacherTable.Controls.Add(label, i, 0);
+            }
+
+            for (int row = 1; row < 1 + n; row++)
+            {
+                string[] fields = { teachers[row - 1].Id.ToString(), teachers[row - 1].LastName, teachers[row - 1].FirstName, teachers[row - 1].MiddleName, teachers[row - 1].Department };
+
+                for (int col = 0; col < 5; col++)
                 {
                     Label label = new Label();
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     label.AutoSize = false;
                     label.Dock = DockStyle.Fill;
-                    label.Font = new Font(GetFont(13), FontStyle.Underline);
-                    label.Text = titles[i];
-                    teacherTable.Controls.Add(label, i, 0);
+                    label.Font = GetFont(13);
+                    label.Text = fields[col];
+
+                    teacherTable.Controls.Add(label, col, row);
+                    teacherTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20f));
+                    teacherTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                 }
+            }
 
-                for (int row = 1; row < 1 + n; row++)
-                {
-                    string[] fields = { teachers[row - 1].Id.ToString(), teachers[row - 1].LastName, teachers[row - 1].FirstName, teachers[row - 1].MiddleName, teachers[row - 1].Department };
+            studentsTable.Controls.Clear();
+            studentsTable.ColumnStyles.Clear();
+            studentsTable.RowStyles.Clear();
+            studentsTable.ColumnCount = 0;
+            studentsTable.RowCount = 0;
 
-                    for (int col = 0; col < 5; col++)
-                    {
-                        Label label = new Label();
-                        label.TextAlign = ContentAlignment.MiddleCenter;
-                        label.AutoSize = false;
-                        label.Dock = DockStyle.Fill;
-                        label.Font = GetFont(13);
-                        label.Text = fields[col];
+            studentsTable.AutoScroll = true;
 
-                        teacherTable.Controls.Add(label, col, row);
-                        teacherTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
-                        teacherTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-                    }
-                }
+            studentsTable.ColumnCount = 8;
+            List<Student> students = service.Students.GetAll();
+            n = students.Count;
+            studentsTable.RowCount = 1 + n + 1;
 
-                studentsTable.Controls.Clear();
-                studentsTable.ColumnStyles.Clear();
-                studentsTable.RowStyles.Clear();
-                studentsTable.ColumnCount = 0;
-                studentsTable.RowCount = 0;
+            titles = new string[] { "id", "Прізвище", "Ім'я", "По батькові", "Група", "Адреса", "Номер", "Кількість вибраних курсів" };
+            for (int i = 0; i < 8; i++)
+            {
+                Label label = new Label();
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.AutoSize = false;
+                label.Dock = DockStyle.Fill;
+                label.Font = new Font(GetFont(13), FontStyle.Underline);
+                label.Text = titles[i];
+                studentsTable.Controls.Add(label, i, 0);
+            }
 
-                studentsTable.AutoScroll = true;
-
-                studentsTable.ColumnCount = 8;
-                List<Student> students = service.Students.GetAll();
-                n = students.Count;
-                studentsTable.RowCount = 1 + n;
-
-                titles = new string[]{ "id", "Прізвище", "Ім'я", "По батькові", "Група", "Адреса", "Номер", "Кількість вибраних курсів"};
-                for (int i = 0; i < 8; i++)
-                {
-                    Label label = new Label();
-                    label.TextAlign = ContentAlignment.MiddleCenter;
-                    label.AutoSize = false;
-                    label.Dock = DockStyle.Fill;
-                    label.Font = new Font(GetFont(13), FontStyle.Underline);
-                    label.Text = titles[i];
-                    studentsTable.Controls.Add(label, i, 0);
-                }
-
-                for (int row = 1; row < 1 + n; row++)
-                {
-                    string[] fields = { students[row - 1].Id.ToString(), students[row - 1].LastName, students[row - 1].FirstName,
+            for (int row = 1; row < 1 + n; row++)
+            {
+                string[] fields = { students[row - 1].Id.ToString(), students[row - 1].LastName, students[row - 1].FirstName,
                         students[row - 1].MiddleName, students[row - 1].Group, students[row-1].Address, students[row-1].Phone,
                         students[row-1].CoursesTaken.ToString() };
-                   
 
-                    for (int col = 0; col < 8; col++)
-                    {
-                        Label label = new Label();
-                        label.TextAlign = ContentAlignment.MiddleCenter;
-                        label.AutoSize = false;
-                        label.Dock = DockStyle.Fill;
-                        label.Font = GetFont(13);
-                        label.Text = fields[col];
 
-                        studentsTable.Controls.Add(label, col, row);
-                        studentsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
-                        studentsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-                    }
-                }
-
-                subjectsTable.Controls.Clear();
-                subjectsTable.ColumnStyles.Clear();
-                subjectsTable.RowStyles.Clear();
-                subjectsTable.ColumnCount = 0;
-                subjectsTable.RowCount = 0;
-
-                subjectsTable.AutoScroll = true;
-
-                subjectsTable.ColumnCount = 4;
-                List<Subject> subjects = service.Subjects.GetAll();
-                n = subjects.Count;
-                subjectsTable.RowCount = 1 + n + 1;
-
-                titles = new string[]{ "id", "Назва", "Опис"};
-                for (int i = 0; i < 3; i++)
+                for (int col = 0; col < 8; col++)
                 {
                     Label label = new Label();
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     label.AutoSize = false;
                     label.Dock = DockStyle.Fill;
-                    label.Font = new Font(GetFont(13), FontStyle.Underline);
-                    label.Text = titles[i];
-                    subjectsTable.Controls.Add(label, i, 0);
+                    label.Font = GetFont(13);
+                    label.Text = fields[col];
+
+                    studentsTable.Controls.Add(label, col, row);
+                    studentsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.5f));// (SizeType.Absolute, 180));
+                    studentsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                 }
+            }
 
-                for (int row = 1; row < 1 + n; row++)
-                {
-                    string[] fields = { subjects[row - 1].Id.ToString(), subjects[row - 1].Name, subjects[row - 1].Description };
-                   
+            subjectsTable.Controls.Clear();
+            subjectsTable.ColumnStyles.Clear();
+            subjectsTable.RowStyles.Clear();
+            subjectsTable.ColumnCount = 0;
+            subjectsTable.RowCount = 0;
 
-                    for (int col = 0; col < 3; col++)
-                    {
-                        Label label = new Label();
-                        label.TextAlign = ContentAlignment.MiddleCenter;
-                        label.AutoSize = false;
-                        label.Dock = DockStyle.Fill;
-                        label.Font = GetFont(11);
-                        label.Text = fields[col];
+            subjectsTable.AutoScroll = true;
 
-                        subjectsTable.Controls.Add(label, col, row);
-                        subjectsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
-                        subjectsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-                    }
-                }
+            subjectsTable.ColumnCount = 3;
+            List<Subject> subjects = service.Subjects.GetAll();
+            n = subjects.Count;
+            subjectsTable.RowCount = 1 + n + 1;
+
+            titles = new string[] { "id", "Назва", "Опис" };
+            for (int i = 0; i < 3; i++)
+            {
+                Label label = new Label();
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.AutoSize = false;
+                label.Dock = DockStyle.Fill;
+                label.Font = new Font(GetFont(15), FontStyle.Underline);
+                label.Text = titles[i];
+                subjectsTable.Controls.Add(label, i, 0);
+            }
+
+            for (int row = 1; row < 1 + n; row++)
+            {
+                string[] fields = { subjects[row - 1].Id.ToString(), subjects[row - 1].Name, subjects[row - 1].Description };
 
 
-                semestersTable.Controls.Clear();
-                semestersTable.ColumnStyles.Clear();
-                semestersTable.RowStyles.Clear();
-                semestersTable.ColumnCount = 0;
-                semestersTable.RowCount = 0;
-
-                semestersTable.AutoScroll = true;
-
-                semestersTable.ColumnCount = 5;
-                List<Semester> semesters = service.Semesters.GetAll();
-                n = semesters.Count;
-                semestersTable.RowCount = 1 + n + 1;
-
-                titles = new string[]{ "id", "Дата початку", "Дата кінця", "Мінімальне число курсів студентам" };
-                for (int i = 0; i < 4; i++)
+                for (int col = 0; col < 3; col++)
                 {
                     Label label = new Label();
                     label.TextAlign = ContentAlignment.MiddleCenter;
                     label.AutoSize = false;
                     label.Dock = DockStyle.Fill;
-                    label.Font = new Font(GetFont(13), FontStyle.Underline);
-                    label.Text = titles[i];
-                    semestersTable.Controls.Add(label, i, 0);
-                }
+                    label.Font = GetFont(15);
+                    label.Text = fields[col];
 
-                for (int row = 1; row < 1 + n; row++)
+                    subjectsTable.Controls.Add(label, col, row);
+                    subjectsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
+                    subjectsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
+                }
+            }
+
+
+            semestersTable.Controls.Clear();
+            semestersTable.ColumnStyles.Clear();
+            semestersTable.RowStyles.Clear();
+            semestersTable.ColumnCount = 0;
+            semestersTable.RowCount = 0;
+
+            semestersTable.AutoScroll = true;
+
+            semestersTable.ColumnCount = 4;
+            List<Semester> semesters = service.Semesters.GetAll();
+            n = semesters.Count;
+            semestersTable.RowCount = 1 + n + 1;
+
+            titles = new string[] { "id", "Дата початку", "Дата кінця", "Мінімальне число курсів студентам" };
+            for (int i = 0; i < 4; i++)
+            {
+                Label label = new Label();
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.AutoSize = false;
+                label.Dock = DockStyle.Fill;
+                label.Font = new Font(GetFont(15), FontStyle.Underline);
+                label.Text = titles[i];
+                semestersTable.Controls.Add(label, i, 0);
+            }
+
+            for (int row = 1; row < 1 + n; row++)
+            {
+                string[] fields = { semesters[row - 1].Id.ToString(), semesters[row - 1].BeginningDate, semesters[row - 1].EndDate, semesters[row - 1].StudentsMinCoursesCount.ToString() };
+
+
+                for (int col = 0; col < 4; col++)
                 {
-                    string[] fields = { semesters[row - 1].Id.ToString(), semesters[row - 1].BeginningDate, semesters[row - 1].EndDate, semesters[row-1].StudentsMinCoursesCount.ToString() };
+                    Label label = new Label();
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.AutoSize = false;
+                    label.Dock = DockStyle.Fill;
+                    label.Font = GetFont(15);
+                    label.Text = fields[col];
 
-
-                    for (int col = 0; col < 4; col++)
-                    {
-                        Label label = new Label();
-                        label.TextAlign = ContentAlignment.MiddleCenter;
-                        label.AutoSize = false;
-                        label.Dock = DockStyle.Fill;
-                        label.Font = GetFont(11);
-                        label.Text = fields[col];
-
-                        semestersTable.Controls.Add(label, col, row);
-                        semestersTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
-                        semestersTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-                    }
+                    semestersTable.Controls.Add(label, col, row);
+                    semestersTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.25f));
+                    semestersTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 70));
                 }
+            }
 
 
             {
@@ -236,12 +235,12 @@ namespace UniversityFacultativesSystem
 
                 courseTable.AutoScroll = true;
 
-                courseTable.ColumnCount = 6;
+                courseTable.ColumnCount = 5;
                 List<Course> courses = service.Courses.GetAll();
                 n = courses.Count;
                 courseTable.RowCount = 1 + n + 1;
 
-                titles = new string[] { "id", "id предмета", "id викладача",  "Кількість годин" , "Тип"};
+                titles = new string[] { "id", "id предмета", "id викладача", "Кількість годин", "Тип" };
                 for (int i = 0; i < 5; i++)
                 {
                     Label label = new Label();
@@ -255,7 +254,7 @@ namespace UniversityFacultativesSystem
 
                 for (int row = 1; row < 1 + n; row++)
                 {
-                    string[] fields = { courses[row - 1].Id.ToString(), courses[row - 1].SubjectId.ToString(), courses[row - 1].TeacherId.ToString(), courses[row - 1].Hours.ToString(), courses[row-1].Type };
+                    string[] fields = { courses[row - 1].Id.ToString(), courses[row - 1].SubjectId.ToString(), courses[row - 1].TeacherId.ToString(), courses[row - 1].Hours.ToString(), courses[row - 1].Type };
 
                     for (int col = 0; col < 5; col++)
                     {
@@ -267,7 +266,7 @@ namespace UniversityFacultativesSystem
                         label.Text = fields[col];
 
                         courseTable.Controls.Add(label, col, row);
-                        courseTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        courseTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20f));
                         courseTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
@@ -282,12 +281,12 @@ namespace UniversityFacultativesSystem
 
                 teacherloginsTables.AutoScroll = true;
 
-                teacherloginsTables.ColumnCount = 4;
+                teacherloginsTables.ColumnCount = 3;
                 List<UserLogin> logins = service.Logins.GetTeachersLogins();
                 n = logins.Count;
                 teacherloginsTables.RowCount = 1 + n + 1;
 
-                titles = new string[] { "id викладача", "Логін", "Пароль"};
+                titles = new string[] { "id викладача", "Логін", "Пароль" };
                 for (int i = 0; i < 3; i++)
                 {
                     Label label = new Label();
@@ -301,7 +300,7 @@ namespace UniversityFacultativesSystem
 
                 for (int row = 1; row < 1 + n; row++)
                 {
-                    string[] fields = { logins[row - 1].UserId.ToString(), logins[row - 1].Login, logins[row-1].Password };
+                    string[] fields = { logins[row - 1].UserId.ToString(), logins[row - 1].Login, logins[row - 1].Password };
 
                     for (int col = 0; col < 3; col++)
                     {
@@ -313,7 +312,7 @@ namespace UniversityFacultativesSystem
                         label.Text = fields[col];
 
                         teacherloginsTables.Controls.Add(label, col, row);
-                        teacherloginsTables.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        teacherloginsTables.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
                         teacherloginsTables.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
@@ -326,7 +325,7 @@ namespace UniversityFacultativesSystem
                 studentloginsTables.ColumnCount = 0;
                 studentloginsTables.RowCount = 0;
                 studentloginsTables.AutoScroll = true;
-                studentloginsTables.ColumnCount = 4;
+                studentloginsTables.ColumnCount = 3;
 
                 List<UserLogin> logins = service.Logins.GetStudentsLogins();
                 n = logins.Count;
@@ -358,7 +357,7 @@ namespace UniversityFacultativesSystem
                         label.Text = fields[col];
 
                         studentloginsTables.Controls.Add(label, col, row);
-                        studentloginsTables.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 180));
+                        studentloginsTables.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
                         studentloginsTables.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
                     }
                 }
@@ -452,7 +451,7 @@ namespace UniversityFacultativesSystem
                 try
                 {
                     service.Subjects.AddNew(new Subject(
-                        -1, subjectname.Text, subjectdescription.Text ));
+                        -1, subjectname.Text, subjectdescription.Text));
                 }
                 catch (Exception ex)
                 {
@@ -504,7 +503,7 @@ namespace UniversityFacultativesSystem
                 try
                 {
                     service.Semesters.ChangeInfo(int.Parse(semesterid.Text), new Semester(
-                        -1, semesterstart.Text, semesterend.Text, int.Parse(semestermin.Text)));    
+                        -1, semesterstart.Text, semesterend.Text, int.Parse(semestermin.Text)));
                 }
                 catch (Exception ex)
                 {
@@ -563,6 +562,11 @@ namespace UniversityFacultativesSystem
                 }
             }
             DeaneryForm_Load(null, null);
+        }
+
+        private void Tab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

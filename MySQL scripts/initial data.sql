@@ -1,3 +1,6 @@
+create user 'deanery'@'localhost' identified by 'deanery32188';
+grant delete, execute, grant option, insert, select, show view, update on course.* to 'deanery'@'localhost';
+
 call insert_teacher_and_create_user('Звіробійко','Олександр', 'Петрович', 'Кафедра Математики');
 call insert_teacher_and_create_user('Вогняникова','Марія', 'Василівна', 'Кафедра Фізики');
 call insert_teacher_and_create_user('Мрійников','Оксана', 'Ігорівна', 'Кафедра Історії');

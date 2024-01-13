@@ -39,5 +39,7 @@ DELIMITER ;
 CALL delete_teacher_and_user_loop();
 CALL delete_student_and_user_loop();
 
+drop user 'deanery'@'localhost';
+
 drop procedure delete_teacher_and_user_loop;
 drop procedure delete_student_and_user_loop;

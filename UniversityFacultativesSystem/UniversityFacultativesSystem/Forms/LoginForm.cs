@@ -77,7 +77,7 @@ namespace UniversityFacultativesSystem
                         success = false; 
                         break;
                     }
-                    Program.GoTo(new StudentForm(user, password));
+                    throw new Exception();// Program.GoTo(new StudentForm(user, password));
                     break;
             }
 

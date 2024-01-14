@@ -1,6 +1,6 @@
 ﻿namespace UniversityFacultativesSystem
 {
-    partial class TeacherForm
+    partial class StudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,35 +45,22 @@
             this.teacherTable = new System.Windows.Forms.TableLayoutPanel();
             this.Tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.enroll = new System.Windows.Forms.Button();
+            this.courseid = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.enrollmentsTable = new System.Windows.Forms.TableLayoutPanel();
             this.gradesPage = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.modify = new System.Windows.Forms.Button();
-            this.modifygrade = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.modifysemester = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.putGrade = new System.Windows.Forms.Button();
-            this.grade = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.enrollmentid = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.semesterid = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.gradesTable = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.subjectidTextbox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.hoursTextbox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.typeTextbox = new System.Windows.Forms.TextBox();
-            this.newCourse = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.coursePage.SuspendLayout();
             this.semestersPage.SuspendLayout();
@@ -82,9 +69,8 @@
             this.teachersPage.SuspendLayout();
             this.Tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.gradesPage.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.gradesPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -139,11 +125,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Ink Free", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(247, 72);
+            this.label1.Location = new System.Drawing.Point(246, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1427, 62);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Вітаємо, викладаче, ";
+            this.label1.Text = "Вітаємо, студенте, ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonQuit
@@ -168,7 +154,6 @@
             // 
             this.coursePage.AutoScroll = true;
             this.coursePage.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.coursePage.Controls.Add(this.panel2);
             this.coursePage.Controls.Add(this.courseTable);
             this.coursePage.Location = new System.Drawing.Point(4, 31);
             this.coursePage.Name = "coursePage";
@@ -183,12 +168,13 @@
             this.courseTable.ColumnCount = 2;
             this.courseTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.courseTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.courseTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.courseTable.Location = new System.Drawing.Point(3, 3);
             this.courseTable.Name = "courseTable";
             this.courseTable.RowCount = 2;
             this.courseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.courseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.courseTable.Size = new System.Drawing.Size(1909, 747);
+            this.courseTable.Size = new System.Drawing.Size(1906, 816);
             this.courseTable.TabIndex = 2;
             // 
             // semestersPage
@@ -319,6 +305,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.enrollmentsTable);
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
@@ -326,27 +314,90 @@
             this.tabPage1.Size = new System.Drawing.Size(1912, 822);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Записи";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.enroll);
+            this.panel2.Controls.Add(this.courseid);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Location = new System.Drawing.Point(3, 746);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1906, 73);
+            this.panel2.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label11.Location = new System.Drawing.Point(823, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(297, 26);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Записатися на новий курс ->";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // enroll
+            // 
+            this.enroll.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.enroll.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.enroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enroll.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enroll.ForeColor = System.Drawing.Color.AliceBlue;
+            this.enroll.Location = new System.Drawing.Point(1801, 13);
+            this.enroll.Name = "enroll";
+            this.enroll.Size = new System.Drawing.Size(78, 43);
+            this.enroll.TabIndex = 13;
+            this.enroll.Text = "✔";
+            this.enroll.UseVisualStyleBackColor = true;
+            this.enroll.Click += new System.EventHandler(this.enroll_Click);
+            // 
+            // courseid
+            // 
+            this.courseid.BackColor = System.Drawing.Color.AliceBlue;
+            this.courseid.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseid.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.courseid.Location = new System.Drawing.Point(1514, 24);
+            this.courseid.Name = "courseid";
+            this.courseid.Size = new System.Drawing.Size(207, 25);
+            this.courseid.TabIndex = 6;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label12.Location = new System.Drawing.Point(1319, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(189, 20);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "id курса факультативу:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // enrollmentsTable
             // 
+            this.enrollmentsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.enrollmentsTable.BackColor = System.Drawing.Color.LightSkyBlue;
             this.enrollmentsTable.ColumnCount = 2;
             this.enrollmentsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.enrollmentsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.enrollmentsTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.enrollmentsTable.Location = new System.Drawing.Point(3, 3);
             this.enrollmentsTable.Name = "enrollmentsTable";
             this.enrollmentsTable.RowCount = 2;
             this.enrollmentsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.enrollmentsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.enrollmentsTable.Size = new System.Drawing.Size(1906, 816);
+            this.enrollmentsTable.Size = new System.Drawing.Size(1906, 750);
             this.enrollmentsTable.TabIndex = 3;
             // 
             // gradesPage
             // 
             this.gradesPage.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.gradesPage.Controls.Add(this.panel1);
             this.gradesPage.Controls.Add(this.gradesTable);
             this.gradesPage.Location = new System.Drawing.Point(4, 31);
             this.gradesPage.Name = "gradesPage";
@@ -355,209 +406,19 @@
             this.gradesPage.TabIndex = 6;
             this.gradesPage.Text = "Оцінки";
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.modify);
-            this.panel1.Controls.Add(this.modifygrade);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.modifysemester);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.putGrade);
-            this.panel1.Controls.Add(this.grade);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.enrollmentid);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.semesterid);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(0, 749);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1912, 73);
-            this.panel1.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label5.Location = new System.Drawing.Point(921, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(300, 52);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Змінити всі оцінки студентів\r\n на ваших факультативах ->";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // modify
-            // 
-            this.modify.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.modify.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modify.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modify.ForeColor = System.Drawing.Color.AliceBlue;
-            this.modify.Location = new System.Drawing.Point(1810, 14);
-            this.modify.Name = "modify";
-            this.modify.Size = new System.Drawing.Size(65, 45);
-            this.modify.TabIndex = 22;
-            this.modify.Text = "✔";
-            this.modify.UseVisualStyleBackColor = true;
-            this.modify.Click += new System.EventHandler(this.modify_Click);
-            // 
-            // modifygrade
-            // 
-            this.modifygrade.BackColor = System.Drawing.Color.AliceBlue;
-            this.modifygrade.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifygrade.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.modifygrade.Location = new System.Drawing.Point(1723, 24);
-            this.modifygrade.Name = "modifygrade";
-            this.modifygrade.Size = new System.Drawing.Size(67, 25);
-            this.modifygrade.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label6.Location = new System.Drawing.Point(1469, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(248, 40);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "На яке (додатнє або від\'ємне) \r\nзначення змінити оцінки:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // modifysemester
-            // 
-            this.modifysemester.BackColor = System.Drawing.Color.AliceBlue;
-            this.modifysemester.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifysemester.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.modifysemester.Location = new System.Drawing.Point(1366, 24);
-            this.modifysemester.Name = "modifysemester";
-            this.modifysemester.Size = new System.Drawing.Size(50, 25);
-            this.modifysemester.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label15.Location = new System.Drawing.Point(1261, 25);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 20);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "id семестру:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label13.Location = new System.Drawing.Point(61, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(214, 26);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Виставити оцінку ->";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // putGrade
-            // 
-            this.putGrade.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.putGrade.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.putGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.putGrade.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.putGrade.ForeColor = System.Drawing.Color.AliceBlue;
-            this.putGrade.Location = new System.Drawing.Point(779, 14);
-            this.putGrade.Name = "putGrade";
-            this.putGrade.Size = new System.Drawing.Size(65, 45);
-            this.putGrade.TabIndex = 13;
-            this.putGrade.Text = "✔";
-            this.putGrade.UseVisualStyleBackColor = true;
-            this.putGrade.Click += new System.EventHandler(this.putGrade_Click);
-            // 
-            // grade
-            // 
-            this.grade.BackColor = System.Drawing.Color.AliceBlue;
-            this.grade.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grade.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.grade.Location = new System.Drawing.Point(706, 25);
-            this.grade.Name = "grade";
-            this.grade.Size = new System.Drawing.Size(67, 25);
-            this.grade.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label4.Location = new System.Drawing.Point(634, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Оцінка:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // enrollmentid
-            // 
-            this.enrollmentid.BackColor = System.Drawing.Color.AliceBlue;
-            this.enrollmentid.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enrollmentid.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.enrollmentid.Location = new System.Drawing.Point(559, 22);
-            this.enrollmentid.Name = "enrollmentid";
-            this.enrollmentid.Size = new System.Drawing.Size(58, 25);
-            this.enrollmentid.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label7.Location = new System.Drawing.Point(472, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "id запису:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // semesterid
-            // 
-            this.semesterid.BackColor = System.Drawing.Color.AliceBlue;
-            this.semesterid.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.semesterid.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.semesterid.Location = new System.Drawing.Point(408, 24);
-            this.semesterid.Name = "semesterid";
-            this.semesterid.Size = new System.Drawing.Size(50, 25);
-            this.semesterid.TabIndex = 4;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label8.Location = new System.Drawing.Point(303, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 20);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "id семестру:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // gradesTable
             // 
-            this.gradesTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gradesTable.BackColor = System.Drawing.Color.LightSkyBlue;
             this.gradesTable.ColumnCount = 2;
             this.gradesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gradesTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.gradesTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradesTable.Location = new System.Drawing.Point(3, 3);
             this.gradesTable.Name = "gradesTable";
             this.gradesTable.RowCount = 2;
             this.gradesTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gradesTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.gradesTable.Size = new System.Drawing.Size(1909, 744);
+            this.gradesTable.Size = new System.Drawing.Size(1906, 816);
             this.gradesTable.TabIndex = 3;
             // 
             // label2
@@ -566,11 +427,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(898, 138);
+            this.label2.Location = new System.Drawing.Point(603, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 46);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Кафедра:";
+            this.label2.Text = "Група:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -579,134 +440,103 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(520, 173);
+            this.label3.Location = new System.Drawing.Point(603, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(880, 62);
+            this.label3.Size = new System.Drawing.Size(125, 62);
             this.label3.TabIndex = 31;
-            this.label3.Text = "кафедра";
+            this.label3.Text = "група";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // label14
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label12.Location = new System.Drawing.Point(541, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 20);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "id предмета:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // subjectidTextbox
-            // 
-            this.subjectidTextbox.BackColor = System.Drawing.Color.AliceBlue;
-            this.subjectidTextbox.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subjectidTextbox.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.subjectidTextbox.Location = new System.Drawing.Point(649, 23);
-            this.subjectidTextbox.Name = "subjectidTextbox";
-            this.subjectidTextbox.Size = new System.Drawing.Size(207, 25);
-            this.subjectidTextbox.TabIndex = 6;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label10.Location = new System.Drawing.Point(914, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 20);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Кількість годин:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // hoursTextbox
-            // 
-            this.hoursTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hoursTextbox.BackColor = System.Drawing.Color.AliceBlue;
-            this.hoursTextbox.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hoursTextbox.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.hoursTextbox.Location = new System.Drawing.Point(1049, 23);
-            this.hoursTextbox.Name = "hoursTextbox";
-            this.hoursTextbox.Size = new System.Drawing.Size(235, 25);
-            this.hoursTextbox.TabIndex = 10;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label9.Location = new System.Drawing.Point(1334, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 20);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Тип занять:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // typeTextbox
-            // 
-            this.typeTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.typeTextbox.BackColor = System.Drawing.Color.AliceBlue;
-            this.typeTextbox.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeTextbox.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.typeTextbox.Location = new System.Drawing.Point(1439, 25);
-            this.typeTextbox.Name = "typeTextbox";
-            this.typeTextbox.Size = new System.Drawing.Size(340, 25);
-            this.typeTextbox.TabIndex = 12;
-            // 
-            // newCourse
-            // 
-            this.newCourse.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.newCourse.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.newCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newCourse.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newCourse.ForeColor = System.Drawing.Color.AliceBlue;
-            this.newCourse.Location = new System.Drawing.Point(1807, 13);
-            this.newCourse.Name = "newCourse";
-            this.newCourse.Size = new System.Drawing.Size(78, 43);
-            this.newCourse.TabIndex = 13;
-            this.newCourse.Text = "✔";
-            this.newCourse.UseVisualStyleBackColor = true;
-            this.newCourse.Click += new System.EventHandler(this.newCourse_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label11.Location = new System.Drawing.Point(72, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(351, 26);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Сформувати і вести новий курс ->";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.newCourse);
-            this.panel2.Controls.Add(this.typeTextbox);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.hoursTextbox);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.subjectidTextbox);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Location = new System.Drawing.Point(3, 749);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1912, 73);
-            this.panel2.TabIndex = 5;
+            this.label14.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label14.Location = new System.Drawing.Point(794, 127);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(126, 46);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Адреса:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TeacherForm
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label16.Location = new System.Drawing.Point(735, 173);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(233, 62);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "адреса";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label17.Location = new System.Drawing.Point(1017, 127);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(126, 46);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Телефон:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label18.Location = new System.Drawing.Point(988, 173);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(185, 62);
+            this.label18.TabIndex = 35;
+            this.label18.Text = "телефон";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label19.Location = new System.Drawing.Point(1198, 127);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(170, 46);
+            this.label19.TabIndex = 36;
+            this.label19.Text = "Записів на факультативи:";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label20.Location = new System.Drawing.Point(1231, 173);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(125, 62);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "записів";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Tab);
             this.Controls.Add(this.buttonQuit);
@@ -718,12 +548,12 @@
             this.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TeacherForm";
+            this.Name = "StudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вхід";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClosingForm);
-            this.Load += new System.EventHandler(this.TeacherForm_Load);
+            this.Load += new System.EventHandler(this.StudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.coursePage.ResumeLayout(false);
             this.semestersPage.ResumeLayout(false);
@@ -732,11 +562,9 @@
             this.teachersPage.ResumeLayout(false);
             this.Tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.gradesPage.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.gradesPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -764,29 +592,16 @@
         private System.Windows.Forms.TabPage gradesPage;
         private System.Windows.Forms.TableLayoutPanel enrollmentsTable;
         private System.Windows.Forms.TableLayoutPanel gradesTable;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button putGrade;
-        private System.Windows.Forms.TextBox grade;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox enrollmentid;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox semesterid;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button modify;
-        private System.Windows.Forms.TextBox modifygrade;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox modifysemester;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button newCourse;
-        private System.Windows.Forms.TextBox typeTextbox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox hoursTextbox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox subjectidTextbox;
+        private System.Windows.Forms.Button enroll;
+        private System.Windows.Forms.TextBox courseid;
         private System.Windows.Forms.Label label12;
     }
 }

@@ -123,11 +123,12 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(246, 47);
+            this.label1.Location = new System.Drawing.Point(483, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1427, 62);
+            this.label1.Size = new System.Drawing.Size(337, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "Вітаємо, студенте, ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,10 +156,10 @@
             this.coursePage.AutoScroll = true;
             this.coursePage.BackColor = System.Drawing.Color.LightSkyBlue;
             this.coursePage.Controls.Add(this.courseTable);
-            this.coursePage.Location = new System.Drawing.Point(4, 31);
+            this.coursePage.Location = new System.Drawing.Point(4, 38);
             this.coursePage.Name = "coursePage";
             this.coursePage.Padding = new System.Windows.Forms.Padding(3);
-            this.coursePage.Size = new System.Drawing.Size(1912, 822);
+            this.coursePage.Size = new System.Drawing.Size(1912, 457);
             this.coursePage.TabIndex = 4;
             this.coursePage.Text = "Курси";
             // 
@@ -174,7 +175,7 @@
             this.courseTable.RowCount = 2;
             this.courseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.courseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.courseTable.Size = new System.Drawing.Size(1906, 816);
+            this.courseTable.Size = new System.Drawing.Size(1906, 451);
             this.courseTable.TabIndex = 2;
             // 
             // semestersPage
@@ -182,10 +183,10 @@
             this.semestersPage.AutoScroll = true;
             this.semestersPage.BackColor = System.Drawing.Color.LightSkyBlue;
             this.semestersPage.Controls.Add(this.semestersTable);
-            this.semestersPage.Location = new System.Drawing.Point(4, 31);
+            this.semestersPage.Location = new System.Drawing.Point(4, 38);
             this.semestersPage.Name = "semestersPage";
             this.semestersPage.Padding = new System.Windows.Forms.Padding(3);
-            this.semestersPage.Size = new System.Drawing.Size(1912, 822);
+            this.semestersPage.Size = new System.Drawing.Size(1912, 815);
             this.semestersPage.TabIndex = 3;
             this.semestersPage.Text = "Семестри";
             // 
@@ -201,7 +202,7 @@
             this.semestersTable.RowCount = 2;
             this.semestersTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.semestersTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.semestersTable.Size = new System.Drawing.Size(1906, 816);
+            this.semestersTable.Size = new System.Drawing.Size(1906, 809);
             this.semestersTable.TabIndex = 6;
             // 
             // subjectsPage
@@ -209,10 +210,10 @@
             this.subjectsPage.AutoScroll = true;
             this.subjectsPage.BackColor = System.Drawing.Color.LightSkyBlue;
             this.subjectsPage.Controls.Add(this.subjectsTable);
-            this.subjectsPage.Location = new System.Drawing.Point(4, 31);
+            this.subjectsPage.Location = new System.Drawing.Point(4, 38);
             this.subjectsPage.Name = "subjectsPage";
             this.subjectsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.subjectsPage.Size = new System.Drawing.Size(1912, 822);
+            this.subjectsPage.Size = new System.Drawing.Size(1912, 815);
             this.subjectsPage.TabIndex = 2;
             this.subjectsPage.Text = "Предмети";
             // 
@@ -228,7 +229,7 @@
             this.subjectsTable.RowCount = 2;
             this.subjectsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.subjectsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.subjectsTable.Size = new System.Drawing.Size(1906, 816);
+            this.subjectsTable.Size = new System.Drawing.Size(1906, 809);
             this.subjectsTable.TabIndex = 4;
             // 
             // studentsPage
@@ -236,10 +237,10 @@
             this.studentsPage.AutoScroll = true;
             this.studentsPage.BackColor = System.Drawing.Color.LightSkyBlue;
             this.studentsPage.Controls.Add(this.studentsTable);
-            this.studentsPage.Location = new System.Drawing.Point(4, 31);
+            this.studentsPage.Location = new System.Drawing.Point(4, 38);
             this.studentsPage.Name = "studentsPage";
             this.studentsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.studentsPage.Size = new System.Drawing.Size(1912, 822);
+            this.studentsPage.Size = new System.Drawing.Size(1912, 815);
             this.studentsPage.TabIndex = 1;
             this.studentsPage.Text = "Студенти";
             // 
@@ -255,7 +256,7 @@
             this.studentsTable.RowCount = 2;
             this.studentsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.studentsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.studentsTable.Size = new System.Drawing.Size(1906, 816);
+            this.studentsTable.Size = new System.Drawing.Size(1906, 809);
             this.studentsTable.TabIndex = 2;
             // 
             // teachersPage
@@ -263,10 +264,10 @@
             this.teachersPage.BackColor = System.Drawing.Color.LightSkyBlue;
             this.teachersPage.Controls.Add(this.teacherTable);
             this.teachersPage.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teachersPage.Location = new System.Drawing.Point(4, 31);
+            this.teachersPage.Location = new System.Drawing.Point(4, 38);
             this.teachersPage.Name = "teachersPage";
             this.teachersPage.Padding = new System.Windows.Forms.Padding(3);
-            this.teachersPage.Size = new System.Drawing.Size(1912, 822);
+            this.teachersPage.Size = new System.Drawing.Size(1912, 457);
             this.teachersPage.TabIndex = 0;
             this.teachersPage.Text = "Викладачі";
             // 
@@ -282,7 +283,7 @@
             this.teacherTable.RowCount = 2;
             this.teacherTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.teacherTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.teacherTable.Size = new System.Drawing.Size(1906, 816);
+            this.teacherTable.Size = new System.Drawing.Size(1906, 451);
             this.teacherTable.TabIndex = 0;
             // 
             // Tab
@@ -296,11 +297,11 @@
             this.Tab.Controls.Add(this.gradesPage);
             this.Tab.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Tab.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Tab.Location = new System.Drawing.Point(0, 223);
+            this.Tab.Location = new System.Drawing.Point(0, 394);
             this.Tab.Multiline = true;
             this.Tab.Name = "Tab";
             this.Tab.SelectedIndex = 0;
-            this.Tab.Size = new System.Drawing.Size(1920, 857);
+            this.Tab.Size = new System.Drawing.Size(1920, 661);
             this.Tab.TabIndex = 29;
             // 
             // tabPage1
@@ -308,10 +309,10 @@
             this.tabPage1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.enrollmentsTable);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1912, 822);
+            this.tabPage1.Size = new System.Drawing.Size(1912, 619);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Записи";
             // 
@@ -324,7 +325,7 @@
             this.panel2.Controls.Add(this.enroll);
             this.panel2.Controls.Add(this.courseid);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Location = new System.Drawing.Point(3, 746);
+            this.panel2.Location = new System.Drawing.Point(3, 550);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1906, 73);
             this.panel2.TabIndex = 6;
@@ -334,21 +335,20 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label11.Location = new System.Drawing.Point(823, 21);
+            this.label11.Location = new System.Drawing.Point(17, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(297, 26);
+            this.label11.Size = new System.Drawing.Size(373, 34);
             this.label11.TabIndex = 14;
             this.label11.Text = "Записатися на новий курс ->";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // enroll
             // 
-            this.enroll.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.enroll.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.enroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enroll.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enroll.ForeColor = System.Drawing.Color.AliceBlue;
-            this.enroll.Location = new System.Drawing.Point(1801, 13);
+            this.enroll.Location = new System.Drawing.Point(815, 13);
             this.enroll.Name = "enroll";
             this.enroll.Size = new System.Drawing.Size(78, 43);
             this.enroll.TabIndex = 13;
@@ -361,9 +361,9 @@
             this.courseid.BackColor = System.Drawing.Color.AliceBlue;
             this.courseid.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseid.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.courseid.Location = new System.Drawing.Point(1514, 24);
+            this.courseid.Location = new System.Drawing.Point(627, 23);
             this.courseid.Name = "courseid";
-            this.courseid.Size = new System.Drawing.Size(207, 25);
+            this.courseid.Size = new System.Drawing.Size(106, 30);
             this.courseid.TabIndex = 6;
             // 
             // label12
@@ -371,9 +371,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label12.Location = new System.Drawing.Point(1319, 27);
+            this.label12.Location = new System.Drawing.Point(386, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(189, 20);
+            this.label12.Size = new System.Drawing.Size(235, 25);
             this.label12.TabIndex = 5;
             this.label12.Text = "id курса факультативу:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -392,17 +392,17 @@
             this.enrollmentsTable.RowCount = 2;
             this.enrollmentsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.enrollmentsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.enrollmentsTable.Size = new System.Drawing.Size(1906, 750);
+            this.enrollmentsTable.Size = new System.Drawing.Size(1906, 541);
             this.enrollmentsTable.TabIndex = 3;
             // 
             // gradesPage
             // 
             this.gradesPage.BackColor = System.Drawing.Color.LightSkyBlue;
             this.gradesPage.Controls.Add(this.gradesTable);
-            this.gradesPage.Location = new System.Drawing.Point(4, 31);
+            this.gradesPage.Location = new System.Drawing.Point(4, 38);
             this.gradesPage.Name = "gradesPage";
             this.gradesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.gradesPage.Size = new System.Drawing.Size(1912, 822);
+            this.gradesPage.Size = new System.Drawing.Size(1912, 815);
             this.gradesPage.TabIndex = 6;
             this.gradesPage.Text = "Оцінки";
             // 
@@ -418,18 +418,19 @@
             this.gradesTable.RowCount = 2;
             this.gradesTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gradesTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.gradesTable.Size = new System.Drawing.Size(1906, 816);
+            this.gradesTable.Size = new System.Drawing.Size(1906, 809);
             this.gradesTable.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label2.Location = new System.Drawing.Point(603, 127);
+            this.label2.Location = new System.Drawing.Point(329, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 46);
+            this.label2.Size = new System.Drawing.Size(82, 29);
             this.label2.TabIndex = 30;
             this.label2.Text = "Група:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -438,11 +439,12 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(603, 173);
+            this.label3.Location = new System.Drawing.Point(329, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 62);
+            this.label3.Size = new System.Drawing.Size(74, 29);
             this.label3.TabIndex = 31;
             this.label3.Text = "група";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,11 +453,12 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label14.Location = new System.Drawing.Point(794, 127);
+            this.label14.Location = new System.Drawing.Point(520, 126);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(126, 46);
+            this.label14.Size = new System.Drawing.Size(93, 29);
             this.label14.TabIndex = 32;
             this.label14.Text = "Адреса:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -464,11 +467,12 @@
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label16.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label16.Location = new System.Drawing.Point(735, 173);
+            this.label16.Location = new System.Drawing.Point(461, 172);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(233, 62);
+            this.label16.Size = new System.Drawing.Size(85, 29);
             this.label16.TabIndex = 33;
             this.label16.Text = "адреса";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -477,11 +481,12 @@
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label17.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label17.Location = new System.Drawing.Point(1017, 127);
+            this.label17.Location = new System.Drawing.Point(743, 126);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(126, 46);
+            this.label17.Size = new System.Drawing.Size(113, 29);
             this.label17.TabIndex = 34;
             this.label17.Text = "Телефон:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -490,11 +495,12 @@
             // 
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label18.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label18.Location = new System.Drawing.Point(988, 173);
+            this.label18.Location = new System.Drawing.Point(714, 172);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(185, 62);
+            this.label18.Size = new System.Drawing.Size(103, 29);
             this.label18.TabIndex = 35;
             this.label18.Text = "телефон";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -503,11 +509,12 @@
             // 
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label19.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label19.Location = new System.Drawing.Point(1198, 127);
+            this.label19.Location = new System.Drawing.Point(924, 126);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(170, 46);
+            this.label19.Size = new System.Drawing.Size(299, 29);
             this.label19.TabIndex = 36;
             this.label19.Text = "Записів на факультативи:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -516,21 +523,22 @@
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label20.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label20.Location = new System.Drawing.Point(1231, 173);
+            this.label20.Location = new System.Drawing.Point(957, 172);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(125, 62);
+            this.label20.Size = new System.Drawing.Size(91, 29);
             this.label20.TabIndex = 37;
             this.label20.Text = "записів";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1055);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label17);
@@ -566,6 +574,7 @@
             this.panel2.PerformLayout();
             this.gradesPage.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

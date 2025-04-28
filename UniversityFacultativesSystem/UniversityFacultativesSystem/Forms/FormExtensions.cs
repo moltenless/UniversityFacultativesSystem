@@ -13,6 +13,7 @@ namespace UniversityFacultativesSystem
         {
             controlsRounding.Add((control, rounding, border));
             control.Paint += PaintElliptically;
+
         }
 
         private static void PaintElliptically(object sender, PaintEventArgs e)

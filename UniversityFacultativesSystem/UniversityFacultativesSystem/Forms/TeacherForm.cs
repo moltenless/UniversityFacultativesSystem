@@ -67,7 +67,7 @@ namespace UniversityFacultativesSystem
             int n = teachers.Count;
             teacherTable.RowCount = 1 + n + 1;
 
-            string[] titles = { "id", "Прізвище", "Ім'я", "По батькові", "Кафедра" };
+            string[] titles = { "id", "Last Name", "First Name", "Middle Name", "Department" };
             for (int i = 0; i < 5; i++)
             {
                 Label label = new Label();
@@ -251,7 +251,7 @@ namespace UniversityFacultativesSystem
                 n = courses.Count;
                 courseTable.RowCount = 1 + n + 1;
 
-                titles = new string[] { "id", "id предмета", "id викладача", "Кількість годин", "Тип" };
+                titles = new string[] { "id", "subject id", "teacher id", "Hours amount", "Type" };
                 for (int i = 0; i < 5; i++)
                 {
                     Label label = new Label();
@@ -343,7 +343,7 @@ namespace UniversityFacultativesSystem
                 n = grades.Count;
                 gradesTable.RowCount = 1 + n + 1;
 
-                titles = new string[] { "id", "id семестру", "id запису", "оцінка"};
+                titles = new string[] { "id", "semester id", "enrollment id", "grade"};
                 for (int i = 0; i < 4; i++)
                 {
                     Label label = new Label();

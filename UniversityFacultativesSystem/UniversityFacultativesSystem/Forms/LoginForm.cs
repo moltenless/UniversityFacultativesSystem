@@ -25,13 +25,13 @@ namespace UniversityFacultativesSystem
             switch (role)
             {
                 case Role.Deanery:
-                    roleLabel.Text += "деканат:";
+                    roleLabel.Text += "deanery staff:";
                     break;
                 case Role.Teacher:
-                    roleLabel.Text += "викладач:";
+                    roleLabel.Text += "teacher:";
                     break;
                 case Role.Student:
-                    roleLabel.Text += "студент:";
+                    roleLabel.Text += "student:";
                     break;
             }
 

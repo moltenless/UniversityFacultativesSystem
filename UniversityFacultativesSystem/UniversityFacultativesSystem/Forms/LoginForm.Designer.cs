@@ -68,7 +68,7 @@
             this.loginButton.Size = new System.Drawing.Size(369, 52);
             this.loginButton.TabIndex = 2;
             this.loginButton.Tag = "1";
-            this.loginButton.Text = "Увійти";
+            this.loginButton.Text = "Log in";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.Login);
             this.loginButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
@@ -117,7 +117,7 @@
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(369, 26);
             this.roleLabel.TabIndex = 6;
-            this.roleLabel.Text = "Увійти як ";
+            this.roleLabel.Text = "Enter as";
             this.roleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelArrow
@@ -126,7 +126,7 @@
             this.labelArrow.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelArrow.Location = new System.Drawing.Point(171, 466);
             this.labelArrow.Name = "labelArrow";
-            this.labelArrow.Size = new System.Drawing.Size(48, 37);
+            this.labelArrow.Size = new System.Drawing.Size(37, 29);
             this.labelArrow.TabIndex = 8;
             this.labelArrow.Text = "->";
             this.labelArrow.Visible = false;
@@ -157,7 +157,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 26);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Логін";
+            this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -169,7 +169,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 26);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Пароль";
+            this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // loginTextbox
@@ -181,7 +181,7 @@
             this.loginTextbox.Location = new System.Drawing.Point(77, 388);
             this.loginTextbox.MaxLength = 30;
             this.loginTextbox.Name = "loginTextbox";
-            this.loginTextbox.Size = new System.Drawing.Size(239, 29);
+            this.loginTextbox.Size = new System.Drawing.Size(239, 23);
             this.loginTextbox.TabIndex = 14;
             this.loginTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -194,7 +194,7 @@
             this.passwordTextbox.Location = new System.Drawing.Point(77, 449);
             this.passwordTextbox.MaxLength = 20;
             this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(239, 25);
+            this.passwordTextbox.Size = new System.Drawing.Size(239, 20);
             this.passwordTextbox.TabIndex = 15;
             this.passwordTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passwordTextbox.UseSystemPasswordChar = true;
@@ -205,15 +205,15 @@
             this.abcCheckbox.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.abcCheckbox.Location = new System.Drawing.Point(257, 424);
             this.abcCheckbox.Name = "abcCheckbox";
-            this.abcCheckbox.Size = new System.Drawing.Size(70, 25);
+            this.abcCheckbox.Size = new System.Drawing.Size(57, 22);
             this.abcCheckbox.TabIndex = 16;
-            this.abcCheckbox.Text = "АБВ";
+            this.abcCheckbox.Text = "ABC";
             this.abcCheckbox.UseVisualStyleBackColor = true;
             this.abcCheckbox.CheckedChanged += new System.EventHandler(this.ABCChange);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(393, 557);

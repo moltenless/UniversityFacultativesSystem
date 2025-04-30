@@ -57,7 +57,7 @@
             this.teacherButton.Size = new System.Drawing.Size(160, 52);
             this.teacherButton.TabIndex = 0;
             this.teacherButton.Tag = "2";
-            this.teacherButton.Text = "Викладач";
+            this.teacherButton.Text = "Teacher";
             this.teacherButton.UseVisualStyleBackColor = false;
             this.teacherButton.Click += new System.EventHandler(this.RoleClicked);
             this.teacherButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
@@ -88,7 +88,7 @@
             this.deaneryButton.Size = new System.Drawing.Size(160, 52);
             this.deaneryButton.TabIndex = 2;
             this.deaneryButton.Tag = "1";
-            this.deaneryButton.Text = "Деканат";
+            this.deaneryButton.Text = "Deanery";
             this.deaneryButton.UseVisualStyleBackColor = false;
             this.deaneryButton.Click += new System.EventHandler(this.RoleClicked);
             this.deaneryButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
@@ -137,7 +137,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(550, 37);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Система факультативів університету";
+            this.label1.Text = "University Facultatives System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -149,8 +149,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(550, 69);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Вас вітає застосунок для роботи з факультативами.\r\nДля входа у систему виберіть р" +
-    "оль:";
+            this.label2.Text = "Application for dealing with facultatives greets you.\r\nChoose a role to log in.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // studentButton
@@ -168,7 +167,7 @@
             this.studentButton.Size = new System.Drawing.Size(160, 52);
             this.studentButton.TabIndex = 7;
             this.studentButton.Tag = "3";
-            this.studentButton.Text = "Студент";
+            this.studentButton.Text = "Student";
             this.studentButton.UseVisualStyleBackColor = false;
             this.studentButton.Click += new System.EventHandler(this.RoleClicked);
             this.studentButton.MouseEnter += new System.EventHandler(this.MouseEnteredRoles);
@@ -180,7 +179,7 @@
             this.label3.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(218, 503);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 37);
+            this.label3.Size = new System.Drawing.Size(25, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "^";
             this.label3.Visible = false;
@@ -191,7 +190,7 @@
             this.label4.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(389, 503);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 37);
+            this.label4.Size = new System.Drawing.Size(25, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "^";
             this.label4.Visible = false;
@@ -202,14 +201,14 @@
             this.label5.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(555, 503);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 37);
+            this.label5.Size = new System.Drawing.Size(25, 29);
             this.label5.TabIndex = 10;
             this.label5.Text = "^";
             this.label5.Visible = false;
             // 
             // StartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(810, 557);

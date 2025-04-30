@@ -129,7 +129,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1427, 62);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Вітаємо, студенте, ";
+            this.label1.Text = "Welcome, dear student,  ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonQuit
@@ -160,7 +160,7 @@
             this.coursePage.Padding = new System.Windows.Forms.Padding(3);
             this.coursePage.Size = new System.Drawing.Size(1912, 822);
             this.coursePage.TabIndex = 4;
-            this.coursePage.Text = "Курси";
+            this.coursePage.Text = "Courses";
             // 
             // courseTable
             // 
@@ -187,7 +187,7 @@
             this.semestersPage.Padding = new System.Windows.Forms.Padding(3);
             this.semestersPage.Size = new System.Drawing.Size(1912, 822);
             this.semestersPage.TabIndex = 3;
-            this.semestersPage.Text = "Семестри";
+            this.semestersPage.Text = "Semesters";
             // 
             // semestersTable
             // 
@@ -214,7 +214,7 @@
             this.subjectsPage.Padding = new System.Windows.Forms.Padding(3);
             this.subjectsPage.Size = new System.Drawing.Size(1912, 822);
             this.subjectsPage.TabIndex = 2;
-            this.subjectsPage.Text = "Предмети";
+            this.subjectsPage.Text = "Subjects";
             // 
             // subjectsTable
             // 
@@ -241,7 +241,7 @@
             this.studentsPage.Padding = new System.Windows.Forms.Padding(3);
             this.studentsPage.Size = new System.Drawing.Size(1912, 822);
             this.studentsPage.TabIndex = 1;
-            this.studentsPage.Text = "Студенти";
+            this.studentsPage.Text = "Students";
             // 
             // studentsTable
             // 
@@ -268,7 +268,7 @@
             this.teachersPage.Padding = new System.Windows.Forms.Padding(3);
             this.teachersPage.Size = new System.Drawing.Size(1912, 822);
             this.teachersPage.TabIndex = 0;
-            this.teachersPage.Text = "Викладачі";
+            this.teachersPage.Text = "Teachers";
             // 
             // teacherTable
             // 
@@ -296,7 +296,7 @@
             this.Tab.Controls.Add(this.gradesPage);
             this.Tab.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Tab.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Tab.Location = new System.Drawing.Point(0, 223);
+            this.Tab.Location = new System.Drawing.Point(0, 204);
             this.Tab.Multiline = true;
             this.Tab.Name = "Tab";
             this.Tab.SelectedIndex = 0;
@@ -313,7 +313,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1912, 822);
             this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "Записи";
+            this.tabPage1.Text = "Enrollments";
             // 
             // panel2
             // 
@@ -336,9 +336,9 @@
             this.label11.ForeColor = System.Drawing.Color.AliceBlue;
             this.label11.Location = new System.Drawing.Point(823, 21);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(297, 26);
+            this.label11.Size = new System.Drawing.Size(179, 26);
             this.label11.TabIndex = 14;
-            this.label11.Text = "Записатися на новий курс ->";
+            this.label11.Text = "Enroll a course ->";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // enroll
@@ -373,9 +373,9 @@
             this.label12.ForeColor = System.Drawing.Color.AliceBlue;
             this.label12.Location = new System.Drawing.Point(1319, 27);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(189, 20);
+            this.label12.Size = new System.Drawing.Size(174, 20);
             this.label12.TabIndex = 5;
-            this.label12.Text = "id курса факультативу:";
+            this.label12.Text = "Facultative course id:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // enrollmentsTable
@@ -404,7 +404,7 @@
             this.gradesPage.Padding = new System.Windows.Forms.Padding(3);
             this.gradesPage.Size = new System.Drawing.Size(1912, 822);
             this.gradesPage.TabIndex = 6;
-            this.gradesPage.Text = "Оцінки";
+            this.gradesPage.Text = "Grades";
             // 
             // gradesTable
             // 
@@ -431,7 +431,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 46);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Група:";
+            this.label2.Text = "Group:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -444,7 +444,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 62);
             this.label3.TabIndex = 31;
-            this.label3.Text = "група";
+            this.label3.Text = "group";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -457,7 +457,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(126, 46);
             this.label14.TabIndex = 32;
-            this.label14.Text = "Адреса:";
+            this.label14.Text = "Address:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
@@ -470,7 +470,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(233, 62);
             this.label16.TabIndex = 33;
-            this.label16.Text = "адреса";
+            this.label16.Text = "address";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
@@ -483,7 +483,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(126, 46);
             this.label17.TabIndex = 34;
-            this.label17.Text = "Телефон:";
+            this.label17.Text = "Phone:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
@@ -496,7 +496,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(185, 62);
             this.label18.TabIndex = 35;
-            this.label18.Text = "телефон";
+            this.label18.Text = "phone";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
@@ -509,7 +509,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(170, 46);
             this.label19.TabIndex = 36;
-            this.label19.Text = "Записів на факультативи:";
+            this.label19.Text = "Enrollment count:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
@@ -522,7 +522,7 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(125, 62);
             this.label20.TabIndex = 37;
-            this.label20.Text = "записів";
+            this.label20.Text = "enrollments";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StudentForm
@@ -530,7 +530,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1061);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label17);

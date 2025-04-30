@@ -193,7 +193,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1141, 62);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Вітаємо, робітнику деканату!";
+            this.label1.Text = "Welcome, deanery staff!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonQuit
@@ -224,7 +224,7 @@
             this.sLoginsPage.Padding = new System.Windows.Forms.Padding(3);
             this.sLoginsPage.Size = new System.Drawing.Size(1912, 834);
             this.sLoginsPage.TabIndex = 8;
-            this.sLoginsPage.Text = "Логіни студентів";
+            this.sLoginsPage.Text = "Students logins";
             // 
             // studentloginsTables
             // 
@@ -251,7 +251,7 @@
             this.tLoginsPage.Padding = new System.Windows.Forms.Padding(3);
             this.tLoginsPage.Size = new System.Drawing.Size(1912, 834);
             this.tLoginsPage.TabIndex = 7;
-            this.tLoginsPage.Text = "Логіни викладачів";
+            this.tLoginsPage.Text = "Teacher logins";
             // 
             // teacherloginsTables
             // 
@@ -279,7 +279,7 @@
             this.coursePage.Padding = new System.Windows.Forms.Padding(3);
             this.coursePage.Size = new System.Drawing.Size(1912, 834);
             this.coursePage.TabIndex = 4;
-            this.coursePage.Text = "Курси";
+            this.coursePage.Text = "Courses";
             // 
             // panel5
             // 
@@ -498,7 +498,7 @@
             this.semestersPage.Padding = new System.Windows.Forms.Padding(3);
             this.semestersPage.Size = new System.Drawing.Size(1912, 834);
             this.semestersPage.TabIndex = 3;
-            this.semestersPage.Text = "Семестри";
+            this.semestersPage.Text = "Semesters";
             // 
             // panel4
             // 
@@ -587,9 +587,9 @@
             this.label19.ForeColor = System.Drawing.Color.AliceBlue;
             this.label19.Location = new System.Drawing.Point(1002, 33);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 20);
+            this.label19.Size = new System.Drawing.Size(40, 20);
             this.label19.TabIndex = 32;
-            this.label19.Text = "Кінець:";
+            this.label19.Text = "End:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // semesterstart
@@ -693,7 +693,7 @@
             this.subjectsPage.Padding = new System.Windows.Forms.Padding(3);
             this.subjectsPage.Size = new System.Drawing.Size(1912, 834);
             this.subjectsPage.TabIndex = 2;
-            this.subjectsPage.Text = "Предмети";
+            this.subjectsPage.Text = "Subjects";
             // 
             // panel3
             // 
@@ -742,11 +742,11 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label15.Location = new System.Drawing.Point(927, 30);
+            this.label15.Location = new System.Drawing.Point(887, 30);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 20);
+            this.label15.Size = new System.Drawing.Size(97, 20);
             this.label15.TabIndex = 16;
-            this.label15.Text = "Опис:";
+            this.label15.Text = "Description:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // subjectExecute
@@ -780,9 +780,9 @@
             this.label17.ForeColor = System.Drawing.Color.AliceBlue;
             this.label17.Location = new System.Drawing.Point(373, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 20);
+            this.label17.Size = new System.Drawing.Size(55, 20);
             this.label17.TabIndex = 11;
-            this.label17.Text = "Назва:";
+            this.label17.Text = "Name:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // subjectid
@@ -803,9 +803,9 @@
             this.subjectsdelete.ForeColor = System.Drawing.Color.AliceBlue;
             this.subjectsdelete.Location = new System.Drawing.Point(18, 52);
             this.subjectsdelete.Name = "subjectsdelete";
-            this.subjectsdelete.Size = new System.Drawing.Size(117, 27);
+            this.subjectsdelete.Size = new System.Drawing.Size(96, 27);
             this.subjectsdelete.TabIndex = 2;
-            this.subjectsdelete.Text = "Видалити";
+            this.subjectsdelete.Text = "Remove";
             this.subjectsdelete.UseVisualStyleBackColor = false;
             // 
             // subjectsupdate
@@ -816,9 +816,9 @@
             this.subjectsupdate.ForeColor = System.Drawing.Color.AliceBlue;
             this.subjectsupdate.Location = new System.Drawing.Point(18, 27);
             this.subjectsupdate.Name = "subjectsupdate";
-            this.subjectsupdate.Size = new System.Drawing.Size(104, 27);
+            this.subjectsupdate.Size = new System.Drawing.Size(93, 27);
             this.subjectsupdate.TabIndex = 1;
-            this.subjectsupdate.Text = "Оновити";
+            this.subjectsupdate.Text = "Update";
             this.subjectsupdate.UseVisualStyleBackColor = false;
             // 
             // subjectsadd
@@ -830,10 +830,10 @@
             this.subjectsadd.ForeColor = System.Drawing.Color.AliceBlue;
             this.subjectsadd.Location = new System.Drawing.Point(18, 3);
             this.subjectsadd.Name = "subjectsadd";
-            this.subjectsadd.Size = new System.Drawing.Size(92, 27);
+            this.subjectsadd.Size = new System.Drawing.Size(61, 27);
             this.subjectsadd.TabIndex = 0;
             this.subjectsadd.TabStop = true;
-            this.subjectsadd.Text = "Додати";
+            this.subjectsadd.Text = "Add";
             this.subjectsadd.UseVisualStyleBackColor = false;
             // 
             // subjectsTable
@@ -864,7 +864,7 @@
             this.studentsPage.Padding = new System.Windows.Forms.Padding(3);
             this.studentsPage.Size = new System.Drawing.Size(1912, 834);
             this.studentsPage.TabIndex = 1;
-            this.studentsPage.Text = "Студенти";
+            this.studentsPage.Text = "Students";
             // 
             // panel2
             // 
@@ -901,9 +901,9 @@
             this.label10.ForeColor = System.Drawing.Color.AliceBlue;
             this.label10.Location = new System.Drawing.Point(288, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 20);
+            this.label10.Size = new System.Drawing.Size(78, 20);
             this.label10.TabIndex = 5;
-            this.label10.Text = "Прізвище:";
+            this.label10.Text = "Surname:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // studentphone
@@ -923,9 +923,9 @@
             this.label13.ForeColor = System.Drawing.Color.AliceBlue;
             this.label13.Location = new System.Drawing.Point(1539, 36);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 20);
+            this.label13.Size = new System.Drawing.Size(57, 20);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Телефон:";
+            this.label13.Text = "Phone:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // studentaddress
@@ -945,9 +945,9 @@
             this.label12.ForeColor = System.Drawing.Color.AliceBlue;
             this.label12.Location = new System.Drawing.Point(1257, 34);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 20);
+            this.label12.Size = new System.Drawing.Size(74, 20);
             this.label12.TabIndex = 14;
-            this.label12.Text = "Адреса:";
+            this.label12.Text = "Address:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // studentExecute
@@ -981,9 +981,9 @@
             this.label7.ForeColor = System.Drawing.Color.AliceBlue;
             this.label7.Location = new System.Drawing.Point(1023, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
+            this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Група:";
+            this.label7.Text = "Group:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // studentmiddle
@@ -1003,9 +1003,9 @@
             this.label8.ForeColor = System.Drawing.Color.AliceBlue;
             this.label8.Location = new System.Drawing.Point(717, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 20);
+            this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 9;
-            this.label8.Text = "По батькові:";
+            this.label8.Text = "Middle name:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // studentfirst
@@ -1025,9 +1025,9 @@
             this.label9.ForeColor = System.Drawing.Color.AliceBlue;
             this.label9.Location = new System.Drawing.Point(516, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 20);
+            this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 7;
-            this.label9.Text = "Ім\'я:";
+            this.label9.Text = "Name:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // studentlast
@@ -1055,7 +1055,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label11.Location = new System.Drawing.Point(191, 37);
+            this.label11.Location = new System.Drawing.Point(185, 31);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 20);
             this.label11.TabIndex = 3;
@@ -1070,9 +1070,9 @@
             this.studentDelete.ForeColor = System.Drawing.Color.AliceBlue;
             this.studentDelete.Location = new System.Drawing.Point(18, 52);
             this.studentDelete.Name = "studentDelete";
-            this.studentDelete.Size = new System.Drawing.Size(117, 27);
+            this.studentDelete.Size = new System.Drawing.Size(86, 27);
             this.studentDelete.TabIndex = 2;
-            this.studentDelete.Text = "Видалити";
+            this.studentDelete.Text = "Delete";
             this.studentDelete.UseVisualStyleBackColor = false;
             // 
             // studentUpdate
@@ -1083,9 +1083,9 @@
             this.studentUpdate.ForeColor = System.Drawing.Color.AliceBlue;
             this.studentUpdate.Location = new System.Drawing.Point(18, 27);
             this.studentUpdate.Name = "studentUpdate";
-            this.studentUpdate.Size = new System.Drawing.Size(104, 27);
+            this.studentUpdate.Size = new System.Drawing.Size(93, 27);
             this.studentUpdate.TabIndex = 1;
-            this.studentUpdate.Text = "Оновити";
+            this.studentUpdate.Text = "Update";
             this.studentUpdate.UseVisualStyleBackColor = false;
             // 
             // studentAdd
@@ -1097,10 +1097,10 @@
             this.studentAdd.ForeColor = System.Drawing.Color.AliceBlue;
             this.studentAdd.Location = new System.Drawing.Point(18, 3);
             this.studentAdd.Name = "studentAdd";
-            this.studentAdd.Size = new System.Drawing.Size(165, 27);
+            this.studentAdd.Size = new System.Drawing.Size(105, 27);
             this.studentAdd.TabIndex = 0;
             this.studentAdd.TabStop = true;
-            this.studentAdd.Text = "Зареєструвати";
+            this.studentAdd.Text = "Register";
             this.studentAdd.UseVisualStyleBackColor = false;
             // 
             // studentsTable
@@ -1131,7 +1131,7 @@
             this.teachersPage.Padding = new System.Windows.Forms.Padding(3);
             this.teachersPage.Size = new System.Drawing.Size(1912, 834);
             this.teachersPage.TabIndex = 0;
-            this.teachersPage.Text = "Викладачі";
+            this.teachersPage.Text = "Teachers";
             // 
             // panel1
             // 
@@ -1189,11 +1189,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label6.Location = new System.Drawing.Point(1392, 28);
+            this.label6.Location = new System.Drawing.Point(1366, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.Size = new System.Drawing.Size(105, 20);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Кафедра:";
+            this.label6.Text = "Department:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // teachermiddle
@@ -1215,9 +1215,9 @@
             this.label5.ForeColor = System.Drawing.Color.AliceBlue;
             this.label5.Location = new System.Drawing.Point(1011, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "По батькові:";
+            this.label5.Text = "Middle name:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // teacherfirst
@@ -1237,9 +1237,9 @@
             this.label4.ForeColor = System.Drawing.Color.AliceBlue;
             this.label4.Location = new System.Drawing.Point(705, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Ім\'я:";
+            this.label4.Text = "Name:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // teachersecond
@@ -1259,9 +1259,9 @@
             this.label3.ForeColor = System.Drawing.Color.AliceBlue;
             this.label3.Location = new System.Drawing.Point(343, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Прізвище:";
+            this.label3.Text = "Surname:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // teacherid
@@ -1294,9 +1294,9 @@
             this.teacherDelete.ForeColor = System.Drawing.Color.AliceBlue;
             this.teacherDelete.Location = new System.Drawing.Point(18, 48);
             this.teacherDelete.Name = "teacherDelete";
-            this.teacherDelete.Size = new System.Drawing.Size(117, 27);
+            this.teacherDelete.Size = new System.Drawing.Size(86, 27);
             this.teacherDelete.TabIndex = 2;
-            this.teacherDelete.Text = "Видалити";
+            this.teacherDelete.Text = "Delete";
             this.teacherDelete.UseVisualStyleBackColor = false;
             // 
             // teacherUpdate
@@ -1307,9 +1307,9 @@
             this.teacherUpdate.ForeColor = System.Drawing.Color.AliceBlue;
             this.teacherUpdate.Location = new System.Drawing.Point(18, 25);
             this.teacherUpdate.Name = "teacherUpdate";
-            this.teacherUpdate.Size = new System.Drawing.Size(104, 27);
+            this.teacherUpdate.Size = new System.Drawing.Size(93, 27);
             this.teacherUpdate.TabIndex = 1;
-            this.teacherUpdate.Text = "Оновити";
+            this.teacherUpdate.Text = "Update";
             this.teacherUpdate.UseVisualStyleBackColor = false;
             // 
             // teacherAdd
@@ -1321,10 +1321,10 @@
             this.teacherAdd.ForeColor = System.Drawing.Color.AliceBlue;
             this.teacherAdd.Location = new System.Drawing.Point(18, 3);
             this.teacherAdd.Name = "teacherAdd";
-            this.teacherAdd.Size = new System.Drawing.Size(165, 27);
+            this.teacherAdd.Size = new System.Drawing.Size(105, 27);
             this.teacherAdd.TabIndex = 0;
             this.teacherAdd.TabStop = true;
-            this.teacherAdd.Text = "Зареєструвати";
+            this.teacherAdd.Text = "Register";
             this.teacherAdd.UseVisualStyleBackColor = false;
             // 
             // teacherTable
@@ -1355,7 +1355,7 @@
             this.Tab.Controls.Add(this.sLoginsPage);
             this.Tab.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Tab.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Tab.Location = new System.Drawing.Point(0, 211);
+            this.Tab.Location = new System.Drawing.Point(0, 192);
             this.Tab.Multiline = true;
             this.Tab.Name = "Tab";
             this.Tab.SelectedIndex = 0;
@@ -1368,7 +1368,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1061);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Tab);
             this.Controls.Add(this.buttonQuit);

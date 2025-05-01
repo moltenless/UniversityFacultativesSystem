@@ -69,4 +69,4 @@ This project provides a full university-style system to manage facultative (elec
 ![ezgif-31888c8a040a74](https://github.com/user-attachments/assets/f8ae57bc-9e22-4a05-ab00-44d50f7d371f)
 
 
-
+---
